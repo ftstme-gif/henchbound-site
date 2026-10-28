@@ -243,8 +243,8 @@ window.HENCHBOUND_DATA = {
       "zone": "Prairie des Aulnes",
       "status": "BOSS",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/014_gardien-des-aulnes.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portrait": "assets/henchs/014_gardien-des-aulnes.webp",
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "015",
@@ -464,7 +464,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/036_skarabok.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "037",
@@ -474,7 +474,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/037_solarix.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "038",
@@ -484,7 +484,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/038_malakor.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "039",
@@ -494,7 +494,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/039_pirot.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "040",
@@ -504,7 +504,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/040_drayo.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "041",
@@ -514,7 +514,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/041_ptit-bourgeon.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "042",
@@ -524,7 +524,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/042_bolt.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "043",
@@ -534,7 +534,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/043_pipix.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "044",
@@ -544,7 +544,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/044_noky.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "045",
@@ -554,7 +554,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/045_sparky.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "046",
@@ -564,7 +564,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/046_impix.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "047",
@@ -574,7 +574,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/047_buggy.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "048",
@@ -584,7 +584,7 @@ window.HENCHBOUND_DATA = {
       "status": "Normal",
       "typeConfirmed": true,
       "portrait": "assets/henchs/048_mystix.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     },
     {
       "id": "049",
@@ -593,8 +593,8 @@ window.HENCHBOUND_DATA = {
       "zone": "Forêt Brumeuse",
       "status": "BOSS",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/049_ombrelys.png",
-      "portraitStatus": "Portrait identifié — import à terminer"
+      "portrait": "assets/henchs/049_ombrelys.webp",
+      "portraitStatus": "Portrait associé — fiche détaillée disponible"
     }
   ]
 };
