@@ -77,7 +77,7 @@ function renderBestiary() {
           <h3>${item.name}</h3>
           <div class="hench-tags">
             <span class="type-pill type-${typeClass}"><span>${typeSymbol}</span>${displayType}</span>
-            ${item.typeConfirmed ? "" : '<span class="confirm-pill">À confirmer</span>'}
+            ${item.typeConfirmed || item.type === "À confirmer" ? "" : '<span class="confirm-pill">À confirmer</span>'}
           </div>
           <div class="hench-meta">
             <span><b>Zone</b> ${item.zone}</span>
