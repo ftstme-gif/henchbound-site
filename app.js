@@ -76,9 +76,11 @@ function openHenchSheet(item) {
   $("#hench-modal-art-status").textContent = item.status === "BOSS" ? "BOSS UNIQUE" : "HENCH NORMAL";
   $("#hench-modal-zone").textContent = item.zone;
   $("#hench-modal-levels").textContent = range;
-  $("#hench-modal-note").textContent = item.status === "BOSS"
-    ? "Boss unique : un adversaire exceptionnel, sans mécanique d’évolution."
-    : `Hench de type ${typeName}, répertorié dans la zone ${item.zone}.`;
+  $("#hench-modal-note").textContent = item.exclusiveHero
+    ? `Hench exclusif à ${item.exclusiveHero}. Ce compagnon est lié à ce héros et à lui seul.`
+    : item.status === "BOSS"
+      ? "Boss unique : un adversaire exceptionnel, sans mécanique d’évolution."
+      : `Hench de type ${typeName}, répertorié dans la zone ${item.zone}.`;
   modal.classList.toggle("modal-boss", item.status === "BOSS");
   $("#hench-modal-type").classList.toggle("type-unconfirmed", item.type === "À confirmer");
   $("#hench-modal-status").classList.toggle("status-boss", item.status === "BOSS");
@@ -137,9 +139,10 @@ function renderBestiary() {
           <div class="hench-tags">
             <span class="type-pill type-${typeClass}"><span>${typeSymbol}</span>${displayType}</span>
             ${item.typeConfirmed || item.type === "À confirmer" ? "" : '<span class="confirm-pill">À confirmer</span>'}
+            ${item.exclusiveHero ? `<span class="exclusive-pill">✦ Exclusif à ${item.exclusiveHero}</span>` : ""}
           </div>
           <div class="hench-meta"><span><b>Zone</b> ${item.zone}</span></div>
-          <span class="asset-file">${item.portrait ? "PORTRAIT ASSOCIÉ • CLIQUER POUR LA FICHE" : "CLIQUE POUR VOIR LA FICHE • PORTRAIT À ASSOCIER"}</span>
+          <span class="asset-file">${item.exclusiveHero ? `HENCH EXCLUSIF À ${item.exclusiveHero.toUpperCase()}` : (item.portrait ? "PORTRAIT ASSOCIÉ • CLIQUER POUR LA FICHE" : "CLIQUE POUR VOIR LA FICHE • PORTRAIT À ASSOCIER")}</span>
         </div>
       </article>`;
   }).join("");
