@@ -157,3 +157,6 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
  .hench-modal-art{height:265px}
  .modal-stat strong{font-size:15px}
 }
+
+/* Badge for the five starter Henchs exclusive to a hero */
+.exclusive-pill{display:inline-flex;align-items:center;gap:4px;background:#fff1cf;border:1px solid #e8ce80;color:#775018;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:900;line-height:1.2}
