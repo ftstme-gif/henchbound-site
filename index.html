@@ -95,14 +95,14 @@
 <section id="bestiary" class="section bestiary-section">
   <div class="section-heading">
     <div><span class="section-kicker">GUIDE DES CRÉATURES</span><h2>Le <em>Bestiaire</em></h2></div>
-    <p>Les 49 Henchs de référence sont répertoriés ici. Les portraits sont associés uniquement quand la correspondance est solide ; aucun sprite ni aperçu de jeu n’est affiché.</p>
+    <p>Clique sur un Hench pour ouvrir sa fiche détaillée : portrait, numéro, type, statut, zone et plage de niveaux indicative. Les niveaux seront à confirmer pour les zones encore à définir.</p>
   </div>
   <div class="bestiary-toolbar">
     <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Chercher un Hench ou un fichier…" autocomplete="off"></label>
     <select id="type-filter" aria-label="Filtrer par type"><option value="">Tous les types</option></select>
     <select id="status-filter" aria-label="Filtrer par statut"><option value="">Tous les statuts</option><option value="Normal">Normal</option><option value="BOSS">Boss</option></select>
   </div>
-  <div class="collection-strip"><span class="strip-icon">✦</span><span><b>49 Henchs répertoriés • portraits en cours d’association</b><small id="level-rules">Niveau max Hench : 300 • Écart héros/Hench : 15 niveaux max • Paliers de référence : 25 niveaux</small></span><span class="strip-count" id="result-count"></span></div>
+  <div class="collection-strip"><span class="strip-icon">✦</span><span><b>49 Henchs répertoriés • clique sur une carte pour ouvrir sa fiche</b><small id="level-rules">Niveau max Hench : 300 • Écart héros/Hench : 15 niveaux max • Paliers de référence : 25 niveaux</small></span><span class="strip-count" id="result-count"></span></div>
   <div id="bestiary-grid" class="bestiary-grid"></div>
   <div class="empty-state" id="empty-state" hidden>Aucun sprite ne correspond à cette recherche.</div>
 </section>
@@ -122,8 +122,16 @@
     <p>Des créatures uniques, indépendantes de toute mécanique d’évolution.</p>
   </div>
   <div class="boss-grid">
-    <article class="boss-card boss-aulnes"><div class="boss-illustration">♜</div><span class="boss-badge">BOSS • FORÊT</span><h3>Gardien des Aulnes</h3><p>Une présence majestueuse veille sur les terres anciennes.</p><div class="boss-footer">UNIQUE <span>✦</span></div></article>
-    <article class="boss-card boss-ombrelys"><div class="boss-illustration">☾</div><span class="boss-badge">BOSS • MYSTÈRE</span><h3>Ombrelys</h3><p>Une silhouette à deux têtes, liée aux secrets de la Forêt Brumeuse.</p><div class="boss-footer">UNIQUE <span>✦</span></div></article>
+    <article class="boss-card boss-aulnes">
+      <img class="boss-portrait" src="assets/henchs/014_gardien-des-aulnes.webp" alt="Gardien des Aulnes, boss Plante" loading="lazy">
+      <span class="boss-badge">BOSS • PRAIRIE DES AULNES</span><h3>Gardien des Aulnes</h3>
+      <p>Un titan de bois et de pierre protège les anciennes terres des Aulnes.</p><div class="boss-footer">N° 014 • PLANTE <span>✦</span></div>
+    </article>
+    <article class="boss-card boss-ombrelys">
+      <img class="boss-portrait" src="assets/henchs/049_ombrelys.webp" alt="Ombrelys, boss Démon" loading="lazy">
+      <span class="boss-badge">BOSS • FORÊT BRUMEUSE</span><h3>Ombrelys</h3>
+      <p>Le dragon à deux aspects veille sur les secrets de la Forêt Brumeuse.</p><div class="boss-footer">N° 049 • DÉMON <span>✦</span></div>
+    </article>
   </div>
 </section>
 
@@ -136,6 +144,32 @@
   <a class="button button-gold" href="#heroes">Retrouver les cinq héros <span>↑</span></a>
 </section>
 </main>
+
+
+<dialog class="hench-modal" id="hench-modal" aria-labelledby="hench-modal-title">
+  <div class="hench-modal-shell">
+    <div class="hench-modal-art" id="hench-modal-art">
+      <span class="modal-number" id="hench-modal-number">N° 000</span>
+      <button type="button" class="hench-modal-close" id="hench-modal-close" aria-label="Fermer la fiche">×</button>
+      <img id="hench-modal-image" class="hench-modal-image" alt="" hidden>
+      <div class="hench-modal-placeholder" id="hench-modal-placeholder"><span>✦</span><b>Portrait à associer</b><small>Cette image sera ajoutée quand le bon Hench sera identifié.</small></div>
+      <span class="modal-art-status" id="hench-modal-art-status">NORMAL</span>
+    </div>
+    <div class="hench-modal-content">
+      <span class="section-kicker">FICHE DU BESTIAIRE</span>
+      <h2 id="hench-modal-title">Nom du Hench</h2>
+      <div class="hench-modal-chips"><span class="modal-type" id="hench-modal-type">✦ Mystère</span><span class="modal-status" id="hench-modal-status">Normal</span></div>
+      <div class="hench-modal-stats">
+        <div class="modal-stat"><small>NUMÉRO</small><strong id="hench-modal-stat-number">000</strong></div>
+        <div class="modal-stat"><small>PLAGE DE NIVEAUX</small><strong id="hench-modal-levels">À définir</strong></div>
+        <div class="modal-stat modal-stat-wide"><small>ZONE</small><strong id="hench-modal-zone">Zone à définir</strong></div>
+      </div>
+      <p class="hench-modal-note" id="hench-modal-note">Fiche de référence Henchbound.</p>
+      <p class="hench-modal-footnote">Les plages de niveaux sont indicatives et suivent la progression des zones. Les valeurs des zones à définir restent à confirmer.</p>
+      <button type="button" class="button button-gold modal-close-action" id="hench-modal-close-action">Retour au bestiaire <span>↩</span></button>
+    </div>
+  </div>
+</dialog>
 
 <footer class="site-footer">
   <a class="brand footer-brand" href="#home"><img src="assets/brand/mark.svg" alt=""><span class="brand-words"><strong>HENCHBOUND</strong><small>THE HENCH CHRONICLES</small></span></a>
