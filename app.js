@@ -70,7 +70,7 @@ function renderBestiary() {
           ${portrait}
           <div class="portrait-placeholder">
             <span class="hench-placeholder-mark">✦</span>
-            <span class="hench-placeholder-text">PORTRAIT À ASSOCIER</span>
+            <span class="hench-placeholder-text">${item.portrait ? "PORTRAIT À IMPORTER" : "PORTRAIT À ASSOCIER"}</span>
           </div>
         </div>
         <div class="hench-copy">
