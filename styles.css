@@ -59,3 +59,43 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 @media(max-width:1050px){.guardian-grid{grid-template-columns:1fr}.guardian-card{grid-template-columns:minmax(0,.85fr) minmax(0,1fr)}.guardian-art{min-height:380px}.guardian-copy h3{font-size:34px}}
 @media(max-width:760px){.guardians-section:before{display:none}.guardian-grid{gap:16px}.guardian-card{grid-template-columns:minmax(0,.9fr) minmax(0,1fr);border-radius:23px}.guardian-art{min-height:290px}.guardian-art img{max-height:335px;padding:12px 0 0}.guardian-copy{padding:21px 15px}.guardian-copy h3{font-size:clamp(23px,6vw,31px)}.guardian-role{font-size:8px;letter-spacing:.1em}.guardian-subtitle{font-size:10px}.guardian-description{font-size:11px;line-height:1.6}.guardian-copy blockquote{font-size:12px;margin:15px 0}.guardian-signature{font-size:7px}.guardian-seal{top:10px;left:9px;font-size:8px;padding:6px 8px}}
 @media(max-width:390px){.guardian-card{grid-template-columns:minmax(0,.82fr) minmax(0,1fr)}.guardian-art{min-height:270px}.guardian-copy{padding:17px 11px}.guardian-copy h3{font-size:22px}.guardian-description{font-size:10px}.guardian-copy blockquote{font-size:11px}.guardian-signature{font-size:6px}}
+
+
+/* Bestiaire complet — 49 fiches, portraits individuels uniquement. */
+.family-grid{grid-template-columns:repeat(11,minmax(0,1fr))}
+.family-fire .family-symbol{color:#c74f34;background:#ffe1d4}
+.family-eau .family-symbol{color:#2378b4;background:#d8f0ff}
+.family-lumiere .family-symbol{color:#a47710}
+.hench-art{height:205px;background:radial-gradient(circle at 50% 42%,#fff9dc 0 12%,#f0e1fb 50%,#e5c9f3 100%)}
+.hench-art:before{width:126px;height:126px}
+.hench-art.has-portrait:before{display:none}
+.hench-portrait{position:absolute;inset:0;z-index:1;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center center;padding:8px 10px}
+.hench-art.portrait-loaded .portrait-placeholder{display:none}
+.portrait-placeholder{z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#89609b}
+.portrait-placeholder .hench-placeholder-mark{width:57px;height:57px}
+.portrait-placeholder .hench-placeholder-text{font-size:8px;letter-spacing:.12em;text-align:center}
+.hench-state.status-normal{background:#fff1c8;color:#73531d;border:1px solid #f2d88b}
+.hench-state.status-boss{background:#f2ddff;color:#682a84;border:1px solid #d8b4ee}
+.hench-copy{padding:16px 18px 18px}
+.hench-copy h3{font-size:20px;line-height:1.15;overflow-wrap:anywhere}
+.hench-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:7px 0 11px}
+.type-pill,.confirm-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;font-size:10px;font-weight:1000;background:#f4e8fb;color:#71408e;border:1px solid #e2c8ef}
+.type-pill>span{font-size:14px;line-height:1}
+.type-plante{background:#e7f3df;color:#3e7a3b;border-color:#cce5bf}
+.type-dragon{background:#ffe4dd;color:#ae4939;border-color:#f5c6b9}
+.type-metal{background:#edf0f3;color:#56606c;border-color:#d4dbe2}
+.type-oiseau{background:#e0f5ff;color:#247ca1;border-color:#bde6f6}
+.type-demon{background:#fbe2ea;color:#a13f68;border-color:#f1bfd2}
+.type-mystere{background:#eee3ff;color:#713d9b;border-color:#d9c3f4}
+.type-bete{background:#fff0de;color:#a85d27;border-color:#f2d1aa}
+.type-insecte{background:#e6f5d8;color:#4a8738;border-color:#c9e7ae}
+.type-lumiere{background:#fff3bd;color:#9b7515;border-color:#f0dc80}
+.type-feu{background:#ffdfcf;color:#b6472f;border-color:#ffc1a6}
+.type-eau{background:#dff3ff;color:#257fb1;border-color:#b9e3fa}
+.confirm-pill{background:#fff5d8;color:#866422;border-color:#f0ddb0}
+.hench-meta{display:grid;gap:5px;font-size:11px;line-height:1.45;color:#827089}
+.hench-meta b{color:#573568;margin-right:5px}
+.asset-file{font-size:8px;line-height:1.4;letter-spacing:.07em;color:#9a835a}
+@media(max-width:1100px){.family-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:760px){.family-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hench-art{height:160px}.hench-copy{padding:12px}.hench-copy h3{font-size:16px}.hench-meta{font-size:9px}.portrait-placeholder .hench-placeholder-text{font-size:7px}.hench-portrait{padding:6px}}
+@media(max-width:380px){.hench-art{height:145px}.hench-copy h3{font-size:15px}}
