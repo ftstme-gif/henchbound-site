@@ -600,6 +600,106 @@ window.HENCHBOUND_DATA = {
       "typeConfirmed": true,
       "portrait": "assets/henchs/049_ombrelys.webp",
       "portraitStatus": "Portrait associé — fiche détaillée disponible"
+    },
+    {
+      "id": "050",
+      "name": "Draco",
+      "type": "Dragon",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/050_draco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "051",
+      "name": "Devilco",
+      "type": "Démon",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/051_devilco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "052",
+      "name": "Beasco",
+      "type": "Bête",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/052_beasco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "053",
+      "name": "Birdco",
+      "type": "Oiseau",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/053_birdco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "054",
+      "name": "Inseco",
+      "type": "Insecte",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/054_inseco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "055",
+      "name": "Flowco",
+      "type": "Plante",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/055_flowco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "056",
+      "name": "Mysco",
+      "type": "Mystère",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/056_mysco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "057",
+      "name": "Metaco",
+      "type": "Métal",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/057_metaco.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "058",
+      "name": "MixDestroyer",
+      "type": "Métal",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/058_mixdestroyer.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+    },
+    {
+      "id": "059",
+      "name": "NeoToxicKalinAngel",
+      "type": "Oiseau",
+      "zone": "À définir",
+      "status": "Normal",
+      "typeConfirmed": true,
+      "portrait": "assets/henchs/059_neotoxic-kalin-angel.svg",
+      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
     }
   ]
 };
