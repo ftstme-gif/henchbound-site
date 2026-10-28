@@ -16,7 +16,7 @@
     <span class="brand-words"><strong>HENCHBOUND</strong><small>THE HENCH CHRONICLES</small></span>
   </a>
   <nav class="main-nav" aria-label="Navigation principale">
-    <a href="#heroes">Les héros</a><a href="#guardians">Les GM</a><a href="#bestiary">Bestiaire</a><a href="#families">9 types</a><a href="#bosses">Boss</a>
+    <a href="#heroes">Les héros</a><a href="#guardians">Les GM</a><a href="#bestiary">Bestiaire</a><a href="#families">11 types</a><a href="#bosses">Boss</a>
   </nav>
   <a class="header-button" href="#bestiary">Explorer <span>↗</span></a>
 </header>
@@ -95,25 +95,25 @@
 <section id="bestiary" class="section bestiary-section">
   <div class="section-heading">
     <div><span class="section-kicker">GUIDE DES CRÉATURES</span><h2>Le <em>Bestiaire</em></h2></div>
-    <p>Aucune image de créature ne sera affichée avant d’avoir identifié les vrais Henchs. Les noms, types et zones seront ajoutés une fois confirmés.</p>
+    <p>Les 49 Henchs de référence sont répertoriés ici. Les portraits sont associés uniquement quand la correspondance est solide ; aucun sprite ni aperçu de jeu n’est affiché.</p>
   </div>
   <div class="bestiary-toolbar">
     <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Chercher un Hench ou un fichier…" autocomplete="off"></label>
-    <select id="type-filter" aria-label="Filtrer par type"><option value="">Tous les types</option><option value="À définir">Type à définir</option></select>
-    <select id="status-filter" aria-label="Filtrer par statut"><option value="">Tous les statuts</option><option value="En préparation">En préparation</option></select>
+    <select id="type-filter" aria-label="Filtrer par type"><option value="">Tous les types</option></select>
+    <select id="status-filter" aria-label="Filtrer par statut"><option value="">Tous les statuts</option><option value="Normal">Normal</option><option value="BOSS">Boss</option></select>
   </div>
-  <div class="collection-strip"><span class="strip-icon">✦</span><span><b>Collection en cours de classement</b><small>Les fiches restent volontairement sans image jusqu’à l’identification des vrais Henchs.</small></span><span class="strip-count" id="result-count"></span></div>
+  <div class="collection-strip"><span class="strip-icon">✦</span><span><b>49 Henchs répertoriés • portraits en cours d’association</b><small id="level-rules">Niveau max Hench : 300 • Écart héros/Hench : 15 niveaux max • Paliers de référence : 25 niveaux</small></span><span class="strip-count" id="result-count"></span></div>
   <div id="bestiary-grid" class="bestiary-grid"></div>
   <div class="empty-state" id="empty-state" hidden>Aucun sprite ne correspond à cette recherche.</div>
 </section>
 
 <section id="families" class="families-section">
   <div class="section-heading section-heading-light">
-    <div><span class="section-kicker">LES AFFINITÉS</span><h2>Neuf familles,<br><em>neuf façons d’exister.</em></h2></div>
-    <p>Les types de Hench qui définiront la collection. Les futures fiches pourront être filtrées par affinité une fois les sprites confirmés.</p>
+    <div><span class="section-kicker">LES AFFINITÉS</span><h2>Onze types,<br><em>onze façons d’exister.</em></h2></div>
+    <p>Les 11 familles reconnues pour Henchbound : Plante, Dragon, Métal, Oiseau, Démon, Mystère, Bête, Insecte, Lumière, Feu et Eau. Certains types de fiches restent à confirmer.</p>
   </div>
   <div class="family-grid" id="family-grid"></div>
-  <div class="family-footnote">✧ Les symboles sont des repères visuels de l’interface, pas des icônes définitives en jeu.</div>
+  <div class="family-footnote">✧ Feu et Eau sont ajoutés au registre des types ; l’association de chaque Hench à son portrait et à son type doit rester cohérente avec les sources.</div>
 </section>
 
 <section id="bosses" class="section bosses-section">
@@ -139,7 +139,7 @@
 
 <footer class="site-footer">
   <a class="brand footer-brand" href="#home"><img src="assets/brand/mark.svg" alt=""><span class="brand-words"><strong>HENCHBOUND</strong><small>THE HENCH CHRONICLES</small></span></a>
-  <span>UNIVERS EN CONSTRUCTION • SITE V3 — BESTIAIRE EN PRÉPARATION</span><a href="#home" class="back-top">Retour en haut ↑</a>
+  <span>HENCHBOUND • 49 HENCHS RÉPERTORIÉS • BESTIAIRE EN CONSTRUCTION</span><a href="#home" class="back-top">Retour en haut ↑</a>
 </footer>
 
 <script src="data.js"></script><script src="app.js"></script>
