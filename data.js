@@ -113,8 +113,9 @@ window.HENCHBOUND_DATA = {
       "zone": "Départ",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
+      "portrait": "assets/henchs/001_koru.webp",
+      "portraitStatus": "Portrait associé — Hench exclusif à Gladark",
+      "exclusiveHero": "Gladark"
     },
     {
       "id": "002",
@@ -123,8 +124,9 @@ window.HENCHBOUND_DATA = {
       "zone": "Départ",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
+      "portrait": "assets/henchs/002_bralys.webp",
+      "portraitStatus": "Portrait associé — Hench exclusif à Ryde",
+      "exclusiveHero": "Ryde"
     },
     {
       "id": "003",
@@ -133,8 +135,9 @@ window.HENCHBOUND_DATA = {
       "zone": "Départ",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
+      "portrait": "assets/henchs/003_miru.webp",
+      "portraitStatus": "Portrait associé — Hench exclusif à Sola",
+      "exclusiveHero": "Sola"
     },
     {
       "id": "004",
@@ -143,8 +146,9 @@ window.HENCHBOUND_DATA = {
       "zone": "Départ",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
+      "portrait": "assets/henchs/004_vylom.webp",
+      "portraitStatus": "Portrait associé — Hench exclusif à Naktsa",
+      "exclusiveHero": "Naktsa"
     },
     {
       "id": "005",
@@ -153,8 +157,9 @@ window.HENCHBOUND_DATA = {
       "zone": "Départ",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
+      "portrait": "assets/henchs/005_thogg.webp",
+      "portraitStatus": "Portrait associé — Hench exclusif à Zinhual",
+      "exclusiveHero": "Zinhual"
     },
     {
       "id": "006",
