@@ -42,20 +42,79 @@ const levelRules = $("#level-rules");
 if (levelRules && DATA.rules) {
   levelRules.textContent = `Niveau max Hench : ${DATA.rules.henchLevelCap} • Écart héros/Hench : ${DATA.rules.maxHeroHenchLevelGap} niveaux max • Paliers de référence : ${DATA.rules.levelBandWidth} niveaux`;
 }
+const zoneLevelBands = {
+  "Départ": [1, 25],
+  "Prairie des Aulnes": [26, 50],
+  "Mont des Cendres": [51, 75],
+  "Îles Oubliées": [76, 100],
+  "Forêt Brumeuse": [101, 125]
+};
+function levelRangeFor(item) {
+  const band = zoneLevelBands[item.zone];
+  if (!band) return "À définir";
+  if (item.status === "BOSS") {
+    const start = band[1] + 1;
+    const end = Math.min(start + (DATA.rules?.levelBandWidth || 25) - 1, DATA.rules?.henchLevelCap || 300);
+    return `${start}–${end}`;
+  }
+  return `${band[0]}–${band[1]}`;
+}
+
+function openHenchSheet(item) {
+  const modal = $("#hench-modal");
+  const image = $("#hench-modal-image");
+  const placeholder = $("#hench-modal-placeholder");
+  const typeInfo = typeByName[item.type];
+  const typeName = item.type === "À confirmer" ? "Type à confirmer" : item.type;
+  const range = levelRangeFor(item);
+
+  $("#hench-modal-number").textContent = `N° ${item.id}`;
+  $("#hench-modal-stat-number").textContent = item.id;
+  $("#hench-modal-title").textContent = item.name;
+  $("#hench-modal-type").textContent = `${typeInfo?.symbol || "?"} ${typeName}`;
+  $("#hench-modal-status").textContent = item.status;
+  $("#hench-modal-art-status").textContent = item.status === "BOSS" ? "BOSS UNIQUE" : "HENCH NORMAL";
+  $("#hench-modal-zone").textContent = item.zone;
+  $("#hench-modal-levels").textContent = range;
+  $("#hench-modal-note").textContent = item.status === "BOSS"
+    ? "Boss unique : un adversaire exceptionnel, sans mécanique d’évolution."
+    : `Hench de type ${typeName}, répertorié dans la zone ${item.zone}.`;
+  modal.classList.toggle("modal-boss", item.status === "BOSS");
+  $("#hench-modal-type").classList.toggle("type-unconfirmed", item.type === "À confirmer");
+  $("#hench-modal-status").classList.toggle("status-boss", item.status === "BOSS");
+  $("#hench-modal-status").classList.toggle("status-normal", item.status !== "BOSS");
+
+  image.onload = () => { image.hidden = false; placeholder.hidden = true; };
+  image.onerror = () => { image.hidden = true; placeholder.hidden = false; };
+  image.alt = item.name;
+  if (item.portrait) {
+    image.hidden = true;
+    placeholder.hidden = false;
+    image.src = item.portrait;
+    if (image.complete && image.naturalWidth > 0) { image.hidden = false; placeholder.hidden = true; }
+  } else {
+    image.removeAttribute("src");
+    image.hidden = true;
+    placeholder.hidden = false;
+  }
+  if (typeof modal.showModal === "function") modal.showModal();
+  else modal.setAttribute("open", "");
+}
+
 function renderBestiary() {
   const query = $("#search").value.trim().toLowerCase();
-  const type = typeFilter.value;
+  const selectedType = typeFilter.value;
   const status = $("#status-filter").value;
   const results = DATA.bestiary.filter(item => {
     const haystack = [item.id, item.name, item.type, item.zone, item.status, item.portraitStatus].join(" ").toLowerCase();
     return (!query || haystack.includes(query)) &&
-      (!type || item.type === type) &&
+      (!selectedType || item.type === selectedType) &&
       (!status || item.status === status);
   });
   bestiaryGrid.innerHTML = results.map(item => {
-    const type = typeByName[item.type];
+    const typeInfo = typeByName[item.type];
     const displayType = item.type === "À confirmer" ? "Type à confirmer" : item.type;
-    const typeSymbol = type ? type.symbol : "?";
+    const typeSymbol = typeInfo ? typeInfo.symbol : "?";
     const typeClass = slugify(item.type);
     const statusClass = item.status === "BOSS" ? "boss" : "normal";
     const portrait = item.portrait ? `
@@ -63,7 +122,7 @@ function renderBestiary() {
         onload="this.closest('.hench-art').classList.add('portrait-loaded')"
         onerror="this.remove()">` : "";
     return `
-      <article class="hench-card">
+      <article class="hench-card" data-hench-id="${item.id}" tabindex="0" role="button" aria-label="Ouvrir la fiche de ${item.name}">
         <div class="hench-art ${item.portrait ? "has-portrait" : ""}">
           <span class="hench-id">N° ${item.id}</span>
           <span class="hench-state status-${statusClass}">${item.status}</span>
@@ -79,10 +138,8 @@ function renderBestiary() {
             <span class="type-pill type-${typeClass}"><span>${typeSymbol}</span>${displayType}</span>
             ${item.typeConfirmed || item.type === "À confirmer" ? "" : '<span class="confirm-pill">À confirmer</span>'}
           </div>
-          <div class="hench-meta">
-            <span><b>Zone</b> ${item.zone}</span>
-          </div>
-          <span class="asset-file">${item.portrait ? "PORTRAIT IDENTIFIÉ • IMPORT EN COURS" : "VISUEL NON ASSOCIÉ — AUCUN SPRITE AFFICHÉ"}</span>
+          <div class="hench-meta"><span><b>Zone</b> ${item.zone}</span></div>
+          <span class="asset-file">${item.portrait ? "PORTRAIT ASSOCIÉ • CLIQUER POUR LA FICHE" : "CLIQUE POUR VOIR LA FICHE • PORTRAIT À ASSOCIER"}</span>
         </div>
       </article>`;
   }).join("");
@@ -92,4 +149,22 @@ function renderBestiary() {
 $("#search").addEventListener("input", renderBestiary);
 typeFilter.addEventListener("change", renderBestiary);
 $("#status-filter").addEventListener("change", renderBestiary);
+bestiaryGrid.addEventListener("click", event => {
+  const card = event.target.closest(".hench-card");
+  if (!card) return;
+  const item = DATA.bestiary.find(entry => entry.id === card.dataset.henchId);
+  if (item) openHenchSheet(item);
+});
+bestiaryGrid.addEventListener("keydown", event => {
+  const card = event.target.closest(".hench-card");
+  if (card && (event.key === "Enter" || event.key === " ")) {
+    event.preventDefault();
+    const item = DATA.bestiary.find(entry => entry.id === card.dataset.henchId);
+    if (item) openHenchSheet(item);
+  }
+});
+const detailModal = $("#hench-modal");
+$("#hench-modal-close").addEventListener("click", () => detailModal.close());
+$("#hench-modal-close-action").addEventListener("click", () => detailModal.close());
+detailModal.addEventListener("click", event => { if (event.target === detailModal) detailModal.close(); });
 renderBestiary();
