@@ -608,8 +608,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/050_draco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/050_draco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "051",
@@ -618,8 +618,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/051_devilco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/051_devilco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "052",
@@ -628,8 +628,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/052_beasco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/052_beasco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "053",
@@ -638,8 +638,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/053_birdco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/053_birdco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "054",
@@ -648,8 +648,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/054_inseco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/054_inseco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "055",
@@ -658,8 +658,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/055_flowco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/055_flowco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "056",
@@ -668,8 +668,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/056_mysco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/056_mysco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "057",
@@ -678,8 +678,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/057_metaco.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/057_metaco.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "058",
@@ -688,8 +688,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/058_mixdestroyer.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/058_mixdestroyer.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     },
     {
       "id": "059",
@@ -698,8 +698,8 @@ window.HENCHBOUND_DATA = {
       "zone": "À définir",
       "status": "Normal",
       "typeConfirmed": true,
-      "portrait": "assets/henchs/059_neotoxic-kalin-angel.svg",
-      "portraitStatus": "Portrait associé — Hench MixMaster, DA Henchbound validée"
+      "portrait": "assets/henchs/059_neotoxic-kalin-angel.webp",
+      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
     }
   ]
 };
