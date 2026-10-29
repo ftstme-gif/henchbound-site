@@ -40,22 +40,24 @@ const emptyState = $("#empty-state");
 const resultCount = $("#result-count");
 const levelRules = $("#level-rules");
 if (levelRules && DATA.rules) {
-  levelRules.textContent = `Niveau max Hench : ${DATA.rules.henchLevelCap} • Écart héros/Hench : ${DATA.rules.maxHeroHenchLevelGap} niveaux max • Paliers de référence : ${DATA.rules.levelBandWidth} niveaux`;
+  levelRules.textContent = `Niveau max Hench : 250 • Écart héros/Hench : ${DATA.rules.maxHeroHenchLevelGap} niveaux max • Paliers de référence : ${DATA.rules.levelBandWidth} niveaux`;
 }
 const zoneLevelBands = {
-  "Départ": [1, 25],
+  "Départ": [1, 250],
   "Prairie des Aulnes": [1, 26],
   "Mont des Cendres": [51, 76],
   "Îles Oubliées": [76, 101],
   "Forêt Brumeuse": [101, 126]
 };
 function levelRangeFor(item) {
+  // Les Henchs de départ sont uniques à leur héros et progressent du niveau 1 au niveau maximum.
+  if (item.exclusiveHero) return "1–250";
   const band = zoneLevelBands[item.zone];
   if (!band) return "À définir";
   if (item.id === "014" && item.name === "Gardien des Aulnes") return "26–51";
   if (item.status === "BOSS") {
     const start = band[1];
-    const end = Math.min(start + (DATA.rules?.levelBandWidth || 25), DATA.rules?.henchLevelCap || 300);
+    const end = Math.min(start + (DATA.rules?.levelBandWidth || 25), 250);
     return `${start}–${end}`;
   }
   return `${band[0]}–${band[1]}`;
