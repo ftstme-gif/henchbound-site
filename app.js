@@ -44,17 +44,18 @@ if (levelRules && DATA.rules) {
 }
 const zoneLevelBands = {
   "Départ": [1, 25],
-  "Prairie des Aulnes": [26, 50],
-  "Mont des Cendres": [51, 75],
-  "Îles Oubliées": [76, 100],
-  "Forêt Brumeuse": [101, 125]
+  "Prairie des Aulnes": [1, 26],
+  "Mont des Cendres": [51, 76],
+  "Îles Oubliées": [76, 101],
+  "Forêt Brumeuse": [101, 126]
 };
 function levelRangeFor(item) {
   const band = zoneLevelBands[item.zone];
   if (!band) return "À définir";
+  if (item.id === "014" && item.name === "Gardien des Aulnes") return "26–51";
   if (item.status === "BOSS") {
-    const start = band[1] + 1;
-    const end = Math.min(start + (DATA.rules?.levelBandWidth || 25) - 1, DATA.rules?.henchLevelCap || 300);
+    const start = band[1];
+    const end = Math.min(start + (DATA.rules?.levelBandWidth || 25), DATA.rules?.henchLevelCap || 300);
     return `${start}–${end}`;
   }
   return `${band[0]}–${band[1]}`;
