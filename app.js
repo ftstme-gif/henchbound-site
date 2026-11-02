@@ -1,3 +1,4 @@
+const $ = (selector) => document.querySelector(selector);
 const DATA = window.HENCHBOUND_DATA;
 
 if (!DATA.types.some(t => t.name === "Lumière")) {
@@ -108,7 +109,7 @@ function renderBestiary() {
     </article>`).join("");
   if (emptyState) {
     emptyState.hidden = results.length > 0;
-    emptyState.textContent = selectedType === "Lumière" ? "Aucun Hench Lumière pour le moment. La catégorie est volontairement réservée." : "Aucun Hench ne correspond à cette recherche.";
+    emptyState.textContent = selectedType === "Lumière" ? "Aucun Hench Lumière pour le moment. Cette famille est réservée aux futures créations originales Henchbound." : "Aucun Hench ne correspond à cette recherche.";
   }
 }
 
