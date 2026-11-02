@@ -37,6 +37,9 @@ const collectionTitle = $("#collection-title");
 const typeTitle = $("#bestiary-type-title");
 const typeCount = $("#bestiary-type-count");
 const search = $("#search");
+const levelRangeFilter = $("#level-range-filter");
+const bestiaryTotal = $("#bestiary-total");
+if (bestiaryTotal) bestiaryTotal.textContent = `${DATA.bestiary.length.toLocaleString("fr-FR")} fiches`;
 let selectedType = DATA.types[1]?.name || DATA.types[0]?.name || "";
 
 function levelRangeFor(item) {
@@ -51,7 +54,10 @@ function portraitFor(item) {
 
 function getTypeItems(typeName) {
   const query = search?.value.trim().toLowerCase() || "";
+  const range = levelRangeFilter?.value || "all";
+  const [rangeMin, rangeMax] = range === "all" ? [null, null] : range.split("-").map(Number);
   return DATA.bestiary.filter(item => item.type === typeName)
+    .filter(item => range === "all" || (item.levelMin >= rangeMin && item.levelMin <= rangeMax))
     .filter(item => !query || [item.id, item.name, item.zone, item.status, item.source].join(" ").toLowerCase().includes(query))
     .sort((a, b) => (a.levelMin ?? 9999) - (b.levelMin ?? 9999) || a.name.localeCompare(b.name));
 }
@@ -123,6 +129,7 @@ function selectType(typeName, scrollIntoView = false) {
 categories?.addEventListener("click", event => { const button = event.target.closest("[data-type]"); if (button) selectType(button.dataset.type); });
 familyGrid?.addEventListener("click", event => { const button = event.target.closest("[data-select-type]"); if (button) selectType(button.dataset.selectType, true); });
 search?.addEventListener("input", renderBestiary);
+levelRangeFilter?.addEventListener("change", renderBestiary);
 
 bestiaryList?.addEventListener("click", event => {
   const row = event.target.closest(".hench-row");
