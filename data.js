@@ -1,10 +1,10 @@
 window.HENCHBOUND_DATA = {
   heroes: [
-    { name: "Gladark", role: "Boxeur", tag: "Poings renforcés", file: "gladark.png" },
-    { name: "Ryde", role: "Épéiste", tag: "Lame et courage", file: "ryde.png" },
-    { name: "Sola", role: "Pistolet", tag: "Tir et précision", file: "sola.png" },
-    { name: "Naktsa", role: "Archère", tag: "Instinct et nature", file: "naktsa.png" },
-    { name: "Zinhual", role: "Sanglier humain", tag: "Force bestiale", file: "zinhual.png" }
+    { name: "Gladark", role: "Boxeur", tag: "Poings renforcés", file: "gladark.png", description: "Quand les routes deviennent dangereuses, Gladark se place toujours devant les autres. Ses poings renforcés brisent les défenses ennemies, mais sa vraie force est sa loyauté : aucun compagnon ne reste derrière lui." },
+    { name: "Ryde", role: "Épéiste", tag: "Lame et courage", file: "ryde.png", description: "Ryde avance avec calme, la lame toujours prête. Il préfère observer avant de frapper et cherche le geste juste plutôt que la démonstration. Dans l’équipe, il est celui qui garde le cap lorsque tout se complique." },
+    { name: "Sola", role: "Pistolet", tag: "Tir et précision", file: "sola.png", description: "Sola ne tire jamais au hasard. Patiente et vive d’esprit, elle repère les dangers avant qu’ils n’approchent et couvre ses alliés à distance. Son sang-froid transforme chaque tir en opportunité." },
+    { name: "Naktsa", role: "Archère", tag: "Instinct et nature", file: "naktsa.png", description: "Naktsa connaît les signes que les autres ne voient pas : une branche brisée, une trace dans la terre, le silence soudain des oiseaux. Son arc protège les chemins sauvages et son instinct lui permet de sentir la présence des Henchs." },
+    { name: "Zinhual", role: "Sanglier humain", tag: "Force bestiale", file: "zinhual.png", description: "Imposant et impossible à faire reculer, Zinhual ouvre la voie lorsque l’équipe est encerclée. Derrière sa puissance de sanglier se cache un cœur généreux : il se bat avec férocité, surtout pour ceux qu’il considère comme les siens." }
   ],
   types: [
     { name: "Plante", number: "01", symbol: "✿", color: "green" },
