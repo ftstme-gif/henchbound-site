@@ -1,77 +1,77 @@
 Numero,Nom,Type,Zone,Statut,Plage_niveaux,Source
-001,Draco,Dragon,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-002,Devilco,Démon,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-003,Beasco,Bête,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-004,Birdco,Oiseau,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-005,Inseco,Insecte,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-006,Flowco,Plante,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-007,Mysco,Mystère,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-008,Metaco,Métal,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
-009,Vanyah,Dragon,Hench de quête / hors carte,Normal,1–26,MixMaster
-010,Pikey,Dragon,Nord de Magirita,Normal,3–28,MixMaster
-011,Rurabbi,Démon,Nord de Magirita,Normal,3–28,MixMaster
-012,Rabbo,Bête,Nord de Magirita,Normal,3–28,MixMaster
-013,Chicoe,Oiseau,Nord de Magirita,Normal,3–28,MixMaster
-014,Pee,Insecte,Nord / Est de Magirita,Normal,3–28,MixMaster
-015,Manglock,Plante,Nord de Magirita,Normal,3–28,MixMaster
-016,Ukki,Mystère,Nord de Magirita,Normal,3–28,MixMaster
-017,Metalocks,Métal,Nord / Est de Magirita,Normal,3–28,MixMaster
-018,Imon,Dragon,Rivage oriental de Mekrita,Normal,5–30,MixMaster
-019,Bebe,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,MixMaster
-020,Goa,Bête,Rivage oriental de Mekrita,Normal,5–30,MixMaster
-021,Caminho,Oiseau,Prairie centrale de Mekrita,Normal,5–30,MixMaster
-022,Bookworm,Insecte,Mekrita / zones de bas niveau,Normal,5–30,MixMaster
-023,Jamoo,Plante,Rivage oriental de Mekrita,Normal,5–30,MixMaster
-024,NortsNcross,Mystère,Rivage oriental de Mekrita,Normal,5–30,MixMaster
-025,BigMaq,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,MixMaster
-026,Noa,Dragon,Rivage oriental de Mekrita,Normal,7–32,MixMaster
-027,Buma,Démon,Prairie centrale de Mekrita,Normal,7–32,MixMaster
-028,Nosie,Bête,Rivage oriental / Prairie centrale de Mekrita,Normal,7–32,MixMaster
-029,Pengie,Oiseau,Prairie centrale de Mekrita,Normal,7–32,MixMaster
-030,SnakeEye,Insecte,Mekrita / zones de bas niveau,Normal,7–32,MixMaster
-031,Mameo,Plante,Mekrita / zones de bas niveau,Normal,7–32,MixMaster
-032,RingWorm,Mystère,Rivage oriental de Mekrita,Normal,7–32,MixMaster
-033,Fennecus,Bête,Nord de Magirita,Normal,110–135,MixMaster
-034,NeoBoxter,Mystère,Zone VIP et nombreuses zones haut niveau,Normal,130–155,MixMaster
-035,Seki-Shu-Ryu,Dragon,Donjon de Rudis / Chambre des dragons,Normal,102–127,MixMaster
-036,Wagstuff,Bête,Chambres Dragon / Métal / Oiseau / Plante,Normal,89–114,MixMaster
-037,EvilClaw,Bête,Marais de l'illusion / chambres élémentaires,Normal,100–125,MixMaster
-038,GreenTravel,Bête,Chambres élémentaires,Normal,94–119,MixMaster
-039,WhiteWags,Bête,Chambres élémentaires,Normal,104–129,MixMaster
-040,MintLion,Bête,Rivage blanc,Normal,106–131,MixMaster
-041,Snowfoxy,Bête,Ruines de Purmai,Normal,112–137,MixMaster
-042,Rhine,Bête,Donjon de Lunacy,Normal,119–144,MixMaster
-043,Blue Piggy,Bête,Forêt d'Iskai,Normal,125–150,MixMaster
-044,Pumpkin,Démon,Zone VIP,Normal,114–139,MixMaster
-045,EvilTree,Plante,Zone VIP,Normal,114–139,MixMaster
-046,Rudolf,Mystère,Zone VIP,Normal,120–145,MixMaster
-047,MutantRudolf,Mystère,Zone VIP,Normal,130–155,MixMaster
-048,Snowman,Mystère,Zone VIP,Normal,140–165,MixMaster
-049,DarkMameo,Démon,Zone VIP / Deuxième sous-sol maudit,Normal,150–175,MixMaster
-050,ToxicSantaBear,Oiseau,Zone VIP,Normal,150–175,MixMaster
-051,Mini Pumpkin Doll,Démon,Zone VIP,Normal,155–180,MixMaster
-052,StrongRudolf,Mystère,Zone VIP,Normal,155–180,MixMaster
-053,PumpkinMonster,Démon,Zone VIP,Normal,158–183,MixMaster
-054,DittSanta,Dragon,Zone VIP,Normal,164–189,MixMaster
-055,NeoVanyah,Dragon,Zone VIP,Normal,164–189,MixMaster
-056,Demoniac Soul Eater,Démon,Zone VIP,Normal,164–189,MixMaster
-057,NeoFennecus,Bête,Zone VIP,Normal,164–189,MixMaster
-058,NeoStrigidae,Oiseau,Zone VIP,Normal,164–189,MixMaster
-059,PenrilSanta,Plante,Zone VIP,Normal,164–189,MixMaster
-060,PhoySanta,Mystère,Zone VIP,Normal,164–189,MixMaster
-061,JinSanta,Métal,Zone VIP,Normal,164–189,MixMaster
-062,NeoMechaOstrich,Métal,Zone VIP,Normal,164–189,MixMaster
-063,MutantBabyWolfSanta,Bête,Zone VIP,Normal,166–191,MixMaster
-064,RudolfSanta,Métal,Zone VIP,Normal,166–191,MixMaster
-065,Pumpkin Doll,Démon,Zone VIP,Normal,168–193,MixMaster
-066,Wolf Santa,Bête,Zone VIP,Normal,170–195,MixMaster
-067,KingKilla,Métal,Zone VIP / Zoo drop,Normal,170–195,MixMaster
-068,JackLantern,Démon,Zone VIP,Normal,170–195,MixMaster
-069,NeoMortarRabbit,Bête,Zone VIP,Normal,174–199,MixMaster
-070,DarkDittSanta,Dragon,Zone VIP,Normal,174–199,MixMaster
-071,DarkPenrilSanta,Plante,Zone VIP,Normal,174–199,MixMaster
-072,DarkPhoySanta,Mystère,Zone VIP,Normal,174–199,MixMaster
-073,DarkJinSanta,Métal,Zone VIP,Normal,174–199,MixMaster
-074,ToxicRudolfSanta,Métal,Zone VIP,Normal,185–210,MixMaster
-075,GoldCutie,Bête,Zone VIP,Normal,191–216,MixMaster
-076,ShadowMagic,Mystère,Donjon de bravoure étage 3,Normal,160–185,MixMaster
+001,Draco,Dragon,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+002,Devilco,Démon,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+003,Beasco,Bête,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+004,Birdco,Oiseau,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+005,Inseco,Insecte,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+006,Flowco,Plante,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+007,Mysco,Mystère,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+008,Metaco,Métal,Zone de tutoriel / Nord de Magirita,Normal,1–26,Henchbound
+009,Vanyah,Dragon,Hench de quête / hors carte,Normal,1–26,Henchbound
+010,Pikey,Dragon,Nord de Magirita,Normal,3–28,Henchbound
+011,Rurabbi,Démon,Nord de Magirita,Normal,3–28,Henchbound
+012,Rabbo,Bête,Nord de Magirita,Normal,3–28,Henchbound
+013,Chicoe,Oiseau,Nord de Magirita,Normal,3–28,Henchbound
+014,Pee,Insecte,Nord / Est de Magirita,Normal,3–28,Henchbound
+015,Manglock,Plante,Nord de Magirita,Normal,3–28,Henchbound
+016,Ukki,Mystère,Nord de Magirita,Normal,3–28,Henchbound
+017,Metalocks,Métal,Nord / Est de Magirita,Normal,3–28,Henchbound
+018,Imon,Dragon,Rivage oriental de Mekrita,Normal,5–30,Henchbound
+019,Bebe,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,Henchbound
+020,Goa,Bête,Rivage oriental de Mekrita,Normal,5–30,Henchbound
+021,Caminho,Oiseau,Prairie centrale de Mekrita,Normal,5–30,Henchbound
+022,Bookworm,Insecte,Mekrita / zones de bas niveau,Normal,5–30,Henchbound
+023,Jamoo,Plante,Rivage oriental de Mekrita,Normal,5–30,Henchbound
+024,NortsNcross,Mystère,Rivage oriental de Mekrita,Normal,5–30,Henchbound
+025,BigMaq,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,Henchbound
+026,Noa,Dragon,Rivage oriental de Mekrita,Normal,7–32,Henchbound
+027,Buma,Démon,Prairie centrale de Mekrita,Normal,7–32,Henchbound
+028,Nosie,Bête,Rivage oriental / Prairie centrale de Mekrita,Normal,7–32,Henchbound
+029,Pengie,Oiseau,Prairie centrale de Mekrita,Normal,7–32,Henchbound
+030,SnakeEye,Insecte,Mekrita / zones de bas niveau,Normal,7–32,Henchbound
+031,Mameo,Plante,Mekrita / zones de bas niveau,Normal,7–32,Henchbound
+032,RingWorm,Mystère,Rivage oriental de Mekrita,Normal,7–32,Henchbound
+033,Fennecus,Bête,Nord de Magirita,Normal,110–135,Henchbound
+034,NeoBoxter,Mystère,Zone VIP et nombreuses zones haut niveau,Normal,130–155,Henchbound
+035,Seki-Shu-Ryu,Dragon,Donjon de Rudis / Chambre des dragons,Normal,102–127,Henchbound
+036,Wagstuff,Bête,Chambres Dragon / Métal / Oiseau / Plante,Normal,89–114,Henchbound
+037,EvilClaw,Bête,Marais de l'illusion / chambres élémentaires,Normal,100–125,Henchbound
+038,GreenTravel,Bête,Chambres élémentaires,Normal,94–119,Henchbound
+039,WhiteWags,Bête,Chambres élémentaires,Normal,104–129,Henchbound
+040,MintLion,Bête,Rivage blanc,Normal,106–131,Henchbound
+041,Snowfoxy,Bête,Ruines de Purmai,Normal,112–137,Henchbound
+042,Rhine,Bête,Donjon de Lunacy,Normal,119–144,Henchbound
+043,Blue Piggy,Bête,Forêt d'Iskai,Normal,125–150,Henchbound
+044,Pumpkin,Démon,Zone VIP,Normal,114–139,Henchbound
+045,EvilTree,Plante,Zone VIP,Normal,114–139,Henchbound
+046,Rudolf,Mystère,Zone VIP,Normal,120–145,Henchbound
+047,MutantRudolf,Mystère,Zone VIP,Normal,130–155,Henchbound
+048,Snowman,Mystère,Zone VIP,Normal,140–165,Henchbound
+049,DarkMameo,Démon,Zone VIP / Deuxième sous-sol maudit,Normal,150–175,Henchbound
+050,ToxicSantaBear,Oiseau,Zone VIP,Normal,150–175,Henchbound
+051,Mini Pumpkin Doll,Démon,Zone VIP,Normal,155–180,Henchbound
+052,StrongRudolf,Mystère,Zone VIP,Normal,155–180,Henchbound
+053,PumpkinMonster,Démon,Zone VIP,Normal,158–183,Henchbound
+054,DittSanta,Dragon,Zone VIP,Normal,164–189,Henchbound
+055,NeoVanyah,Dragon,Zone VIP,Normal,164–189,Henchbound
+056,Demoniac Soul Eater,Démon,Zone VIP,Normal,164–189,Henchbound
+057,NeoFennecus,Bête,Zone VIP,Normal,164–189,Henchbound
+058,NeoStrigidae,Oiseau,Zone VIP,Normal,164–189,Henchbound
+059,PenrilSanta,Plante,Zone VIP,Normal,164–189,Henchbound
+060,PhoySanta,Mystère,Zone VIP,Normal,164–189,Henchbound
+061,JinSanta,Métal,Zone VIP,Normal,164–189,Henchbound
+062,NeoMechaOstrich,Métal,Zone VIP,Normal,164–189,Henchbound
+063,MutantBabyWolfSanta,Bête,Zone VIP,Normal,166–191,Henchbound
+064,RudolfSanta,Métal,Zone VIP,Normal,166–191,Henchbound
+065,Pumpkin Doll,Démon,Zone VIP,Normal,168–193,Henchbound
+066,Wolf Santa,Bête,Zone VIP,Normal,170–195,Henchbound
+067,KingKilla,Métal,Zone VIP / Zoo drop,Normal,170–195,Henchbound
+068,JackLantern,Démon,Zone VIP,Normal,170–195,Henchbound
+069,NeoMortarRabbit,Bête,Zone VIP,Normal,174–199,Henchbound
+070,DarkDittSanta,Dragon,Zone VIP,Normal,174–199,Henchbound
+071,DarkPenrilSanta,Plante,Zone VIP,Normal,174–199,Henchbound
+072,DarkPhoySanta,Mystère,Zone VIP,Normal,174–199,Henchbound
+073,DarkJinSanta,Métal,Zone VIP,Normal,174–199,Henchbound
+074,ToxicRudolfSanta,Métal,Zone VIP,Normal,185–210,Henchbound
+075,GoldCutie,Bête,Zone VIP,Normal,191–216,Henchbound
+076,ShadowMagic,Mystère,Donjon de bravoure étage 3,Normal,160–185,Henchbound
