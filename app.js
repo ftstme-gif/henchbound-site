@@ -120,7 +120,8 @@ function levelRangeFor(item) {
 }
 
 function portraitFor(item) {
-  return item.portrait || `assets/henchs/${item.id}_${slugify(item.name)}.webp`;
+  const overrides = window.HENCHBOUND_PORTRAIT_OVERRIDES || {};
+  return item.portrait || overrides[item.name] || `assets/henchs/${item.id}_${slugify(item.name)}.webp`;
 }
 
 function getTypeItems(typeName) {
