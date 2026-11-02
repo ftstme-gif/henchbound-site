@@ -22,9 +22,80 @@ if (footerLabel) footerLabel.textContent = "HENCHBOUND • CATALOGUE HENCHBOUND 
 const slugify = (value) => String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const typeByName = Object.fromEntries(DATA.types.map(t => [t.name, t]));
 const heroGrid = $("#hero-grid");
-if (heroGrid) heroGrid.innerHTML = DATA.heroes.map((h, i) => `
-  <article class="hero-card"><div class="hero-art"><span class="hero-number">HÉROS 0${i + 1}</span><img class="hero-portrait" src="${h.image || ("assets/heroes/" + h.file)}" alt="${h.name}, ${h.role}"></div>
-  <div class="hero-card-copy"><h3>${h.name}</h3><span class="role-pill">${h.role}</span><p>${h.tag}</p></div></article>`).join("");
+const heroSelector = $("#hero-selector");
+const showcaseImage = $("#showcase-character");
+const showcaseName = $("#showcase-name");
+const showcaseRole = $("#showcase-role");
+const showcasePosition = $("#showcase-position");
+const heroBioName = $("#hero-bio-name");
+const heroBioRole = $("#hero-bio-role");
+const heroBioDescription = $("#hero-bio-description");
+let selectedHeroIndex = Math.max(0, DATA.heroes.findIndex(hero => hero.name === "Naktsa"));
+
+function heroImage(hero) {
+  return hero.image || ("assets/heroes/" + hero.file);
+}
+
+function renderHeroCarousel() {
+  const hero = DATA.heroes[selectedHeroIndex];
+  if (!hero) return;
+  const heroNumber = String(selectedHeroIndex + 1).padStart(2, "0");
+  const totalHeroes = String(DATA.heroes.length).padStart(2, "0");
+
+  if (showcaseImage) {
+    showcaseImage.src = heroImage(hero);
+    showcaseImage.alt = hero.name + ", " + hero.role + " de Henchbound";
+  }
+  if (showcaseName) showcaseName.textContent = hero.name;
+  if (showcaseRole) showcaseRole.textContent = hero.role + " • Héros " + heroNumber;
+  if (showcasePosition) showcasePosition.textContent = heroNumber + " / " + totalHeroes;
+  if (heroBioName) heroBioName.textContent = hero.name;
+  if (heroBioRole) heroBioRole.textContent = hero.role;
+  if (heroBioDescription) heroBioDescription.textContent = hero.description || hero.tag;
+
+  if (heroSelector) {
+    heroSelector.innerHTML = DATA.heroes.map((item, index) => `
+      <button type="button" class="showcase-hero-choice ${index === selectedHeroIndex ? "active" : ""}" data-hero-choice="${index}" aria-pressed="${index === selectedHeroIndex}" aria-label="Voir ${item.name}, ${item.role}">
+        <img src="${heroImage(item)}" alt="" loading="lazy"><span>${item.name}</span>
+      </button>`).join("");
+  }
+}
+
+function selectHero(index, scrollToShowcase = false) {
+  const count = DATA.heroes.length;
+  if (!count) return;
+  selectedHeroIndex = (index + count) % count;
+  renderHeroCarousel();
+  if (scrollToShowcase) $("#hero-showcase-wrap")?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+$("#hero-prev")?.addEventListener("click", () => selectHero(selectedHeroIndex - 1));
+$("#hero-next")?.addEventListener("click", () => selectHero(selectedHeroIndex + 1));
+heroSelector?.addEventListener("click", event => {
+  const button = event.target.closest("[data-hero-choice]");
+  if (button) selectHero(Number(button.dataset.heroChoice));
+});
+
+if (heroGrid) {
+  heroGrid.innerHTML = DATA.heroes.map((hero, index) => `
+    <article class="hero-card" data-hero-index="${index}" role="button" tabindex="0" aria-label="Afficher le portrait et la description de ${hero.name}">
+      <div class="hero-art"><span class="hero-number">HÉROS 0${index + 1}</span><img class="hero-portrait" src="${heroImage(hero)}" alt="${hero.name}, ${hero.role}"></div>
+      <div class="hero-card-copy"><h3>${hero.name}</h3><span class="role-pill">${hero.role}</span><p>${hero.tag}</p></div>
+    </article>`).join("");
+
+  heroGrid.addEventListener("click", event => {
+    const card = event.target.closest("[data-hero-index]");
+    if (card) selectHero(Number(card.dataset.heroIndex), true);
+  });
+  heroGrid.addEventListener("keydown", event => {
+    const card = event.target.closest("[data-hero-index]");
+    if (card && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      selectHero(Number(card.dataset.heroIndex), true);
+    }
+  });
+}
+renderHeroCarousel();
 
 const familyGrid = $("#family-grid");
 if (familyGrid) familyGrid.innerHTML = DATA.types.map(t => `<button type="button" class="family-card family-${slugify(t.name)}" data-select-type="${t.name}" title="Afficher les Henchs ${t.name}"><span class="family-symbol">${t.symbol}</span><b>${t.name}</b><small>${t.number}</small></button>`).join("");
