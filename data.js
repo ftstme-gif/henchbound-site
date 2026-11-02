@@ -14,7 +14,8 @@ window.HENCHBOUND_DATA = {
     { name: "Démon", number: "05", symbol: "☾", color: "rose" },
     { name: "Mystère", number: "06", symbol: "✦", color: "violet" },
     { name: "Bête", number: "07", symbol: "♧", color: "orange" },
-    { name: "Insecte", number: "08", symbol: "❋", color: "lime" }
+    { name: "Insecte", number: "08", symbol: "❋", color: "lime" },
+    { name: "Lumière", number: "09", symbol: "☼", color: "light" }
   ],
   rules: {
     henchLevelCap: 250,
