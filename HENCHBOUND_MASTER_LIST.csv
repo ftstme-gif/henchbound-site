@@ -1,50 +1,77 @@
-"Numero","Nom","Type","Zone","Statut","Type_confirme","Portrait_path","Etat_portrait","Plage_niveaux"
-"001","Koru","Mystère","Départ","Normal","Oui","","À associer sans inventer","1–25"
-"002","Bralys","Insecte","Départ","Normal","Oui","","À associer sans inventer","1–25"
-"003","Miru","Métal","Départ","Normal","Oui","","À associer sans inventer","1–25"
-"004","Vylom","Oiseau","Départ","Normal","Oui","","À associer sans inventer","1–25"
-"005","Thogg","Bête","Départ","Normal","Oui","","À associer sans inventer","1–25"
-"006","Feuilleto","Plante","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"007","Drakelys","Dragon","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"008","Ferrac","Métal","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"009","Plumet","Oiseau","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"010","Démonix","Démon","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"011","Mystifée","Mystère","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"012","Bestigon","Bête","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"013","Scaravolt","Insecte","Prairie des Aulnes","Normal","Oui","","À associer sans inventer","26–50"
-"014","Gardien des Aulnes","Plante","Prairie des Aulnes","BOSS","Oui","assets/henchs/014_gardien-des-aulnes.webp","Portrait associé — images en cours d’intégration","51–75"
-"015","Scoriabeille","Insecte","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"016","Cendrelis","À confirmer","Mont des Cendres","Normal","Non","","À associer sans inventer","51–75"
-"017","Roncebraise","Plante","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"018","Brasombre","Démon","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"019","Scorvarg","Bête","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"020","Vulcacier","Métal","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"021","Magmoryx","Dragon","Mont des Cendres","Normal","Oui","","À associer sans inventer","51–75"
-"022","Fumélis","À confirmer","Mont des Cendres","Normal","Non","","À associer sans inventer","51–75"
-"023","Coralys","Insecte","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"024","Maréaile","Oiseau","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"025","Abyssolia","Plante","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"026","Noxalgue","Démon","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"027","Nérévar","Bête","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"028","Nautiron","Métal","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"029","Thalassyr","Dragon","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"030","Vortexia","Mystère","Îles Oubliées","Normal","Non","","À associer sans inventer","76–100"
-"031","Aetherix","Mystère","À définir","Normal","Oui","","À associer sans inventer","À définir"
-"032","Fangor","Bête","À définir","Normal","Oui","","À associer sans inventer","À définir"
-"033","Ironclad","Métal","À définir","Normal","Oui","","À associer sans inventer","À définir"
-"034","Pyraptor","Dragon","À définir","Normal","Oui","","À associer sans inventer","À définir"
-"035","Sylv'Goliath","Plante","À définir","Normal","Oui","","À associer sans inventer","À définir"
-"036","Skarabok","Insecte","À définir","Normal","Oui","assets/henchs/036_skarabok.png","Portrait recadré — import requis","À définir"
-"037","Solarix","Lumière","À définir","Normal","Oui","assets/henchs/037_solarix.png","Portrait recadré — import requis","À définir"
-"038","Malakor","Démon","À définir","Normal","Oui","assets/henchs/038_malakor.png","Portrait recadré — import requis","À définir"
-"039","Pirot","Mystère","À définir","Normal","Oui","assets/henchs/039_pirot.png","Portrait recadré — import requis","À définir"
-"040","Drayo","Dragon","À définir","Normal","Oui","assets/henchs/040_drayo.png","Portrait recadré — import requis","À définir"
-"041","P'tit-Bourgeon","Plante","À définir","Normal","Oui","assets/henchs/041_ptit-bourgeon.png","Portrait recadré — import requis","À définir"
-"042","Bolt","Métal","À définir","Normal","Oui","assets/henchs/042_bolt.png","Portrait recadré — import requis","À définir"
-"043","Pipix","Oiseau","À définir","Normal","Oui","assets/henchs/043_pipix.png","Portrait recadré — import requis","À définir"
-"044","Noky","Bête","À définir","Normal","Oui","assets/henchs/044_noky.png","Portrait recadré — import requis","À définir"
-"045","Sparky","Lumière","À définir","Normal","Oui","assets/henchs/045_sparky.png","Portrait recadré — import requis","À définir"
-"046","Impix","Démon","À définir","Normal","Oui","assets/henchs/046_impix.png","Portrait recadré — import requis","À définir"
-"047","Buggy","Insecte","À définir","Normal","Oui","assets/henchs/047_buggy.png","Portrait recadré — import requis","À définir"
-"048","Mystix","Mystère","À définir","Normal","Oui","assets/henchs/048_mystix.png","Portrait recadré — import requis","À définir"
-"049","Ombrelys","Démon","Forêt Brumeuse","BOSS","Oui","assets/henchs/049_ombrelys.webp","Portrait associé — images en cours d’intégration","126–150"
+Numero,Nom,Type,Zone,Statut,Plage_niveaux,Source
+001,Draco,Dragon,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+002,Devilco,Démon,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+003,Beasco,Bête,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+004,Birdco,Oiseau,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+005,Inseco,Insecte,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+006,Flowco,Plante,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+007,Mysco,Mystère,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+008,Metaco,Métal,Zone de tutoriel / Nord de Magirita,Normal,1–26,MixMaster
+009,Vanyah,Dragon,Hench de quête / hors carte,Normal,1–26,MixMaster
+010,Pikey,Dragon,Nord de Magirita,Normal,3–28,MixMaster
+011,Rurabbi,Démon,Nord de Magirita,Normal,3–28,MixMaster
+012,Rabbo,Bête,Nord de Magirita,Normal,3–28,MixMaster
+013,Chicoe,Oiseau,Nord de Magirita,Normal,3–28,MixMaster
+014,Pee,Insecte,Nord / Est de Magirita,Normal,3–28,MixMaster
+015,Manglock,Plante,Nord de Magirita,Normal,3–28,MixMaster
+016,Ukki,Mystère,Nord de Magirita,Normal,3–28,MixMaster
+017,Metalocks,Métal,Nord / Est de Magirita,Normal,3–28,MixMaster
+018,Imon,Dragon,Rivage oriental de Mekrita,Normal,5–30,MixMaster
+019,Bebe,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,MixMaster
+020,Goa,Bête,Rivage oriental de Mekrita,Normal,5–30,MixMaster
+021,Caminho,Oiseau,Prairie centrale de Mekrita,Normal,5–30,MixMaster
+022,Bookworm,Insecte,Mekrita / zones de bas niveau,Normal,5–30,MixMaster
+023,Jamoo,Plante,Rivage oriental de Mekrita,Normal,5–30,MixMaster
+024,NortsNcross,Mystère,Rivage oriental de Mekrita,Normal,5–30,MixMaster
+025,BigMaq,Démon,Rivage oriental / Prairie centrale de Mekrita,Normal,5–30,MixMaster
+026,Noa,Dragon,Rivage oriental de Mekrita,Normal,7–32,MixMaster
+027,Buma,Démon,Prairie centrale de Mekrita,Normal,7–32,MixMaster
+028,Nosie,Bête,Rivage oriental / Prairie centrale de Mekrita,Normal,7–32,MixMaster
+029,Pengie,Oiseau,Prairie centrale de Mekrita,Normal,7–32,MixMaster
+030,SnakeEye,Insecte,Mekrita / zones de bas niveau,Normal,7–32,MixMaster
+031,Mameo,Plante,Mekrita / zones de bas niveau,Normal,7–32,MixMaster
+032,RingWorm,Mystère,Rivage oriental de Mekrita,Normal,7–32,MixMaster
+033,Fennecus,Bête,Nord de Magirita,Normal,110–135,MixMaster
+034,NeoBoxter,Mystère,Zone VIP et nombreuses zones haut niveau,Normal,130–155,MixMaster
+035,Seki-Shu-Ryu,Dragon,Donjon de Rudis / Chambre des dragons,Normal,102–127,MixMaster
+036,Wagstuff,Bête,Chambres Dragon / Métal / Oiseau / Plante,Normal,89–114,MixMaster
+037,EvilClaw,Bête,Marais de l'illusion / chambres élémentaires,Normal,100–125,MixMaster
+038,GreenTravel,Bête,Chambres élémentaires,Normal,94–119,MixMaster
+039,WhiteWags,Bête,Chambres élémentaires,Normal,104–129,MixMaster
+040,MintLion,Bête,Rivage blanc,Normal,106–131,MixMaster
+041,Snowfoxy,Bête,Ruines de Purmai,Normal,112–137,MixMaster
+042,Rhine,Bête,Donjon de Lunacy,Normal,119–144,MixMaster
+043,Blue Piggy,Bête,Forêt d'Iskai,Normal,125–150,MixMaster
+044,Pumpkin,Démon,Zone VIP,Normal,114–139,MixMaster
+045,EvilTree,Plante,Zone VIP,Normal,114–139,MixMaster
+046,Rudolf,Mystère,Zone VIP,Normal,120–145,MixMaster
+047,MutantRudolf,Mystère,Zone VIP,Normal,130–155,MixMaster
+048,Snowman,Mystère,Zone VIP,Normal,140–165,MixMaster
+049,DarkMameo,Démon,Zone VIP / Deuxième sous-sol maudit,Normal,150–175,MixMaster
+050,ToxicSantaBear,Oiseau,Zone VIP,Normal,150–175,MixMaster
+051,Mini Pumpkin Doll,Démon,Zone VIP,Normal,155–180,MixMaster
+052,StrongRudolf,Mystère,Zone VIP,Normal,155–180,MixMaster
+053,PumpkinMonster,Démon,Zone VIP,Normal,158–183,MixMaster
+054,DittSanta,Dragon,Zone VIP,Normal,164–189,MixMaster
+055,NeoVanyah,Dragon,Zone VIP,Normal,164–189,MixMaster
+056,Demoniac Soul Eater,Démon,Zone VIP,Normal,164–189,MixMaster
+057,NeoFennecus,Bête,Zone VIP,Normal,164–189,MixMaster
+058,NeoStrigidae,Oiseau,Zone VIP,Normal,164–189,MixMaster
+059,PenrilSanta,Plante,Zone VIP,Normal,164–189,MixMaster
+060,PhoySanta,Mystère,Zone VIP,Normal,164–189,MixMaster
+061,JinSanta,Métal,Zone VIP,Normal,164–189,MixMaster
+062,NeoMechaOstrich,Métal,Zone VIP,Normal,164–189,MixMaster
+063,MutantBabyWolfSanta,Bête,Zone VIP,Normal,166–191,MixMaster
+064,RudolfSanta,Métal,Zone VIP,Normal,166–191,MixMaster
+065,Pumpkin Doll,Démon,Zone VIP,Normal,168–193,MixMaster
+066,Wolf Santa,Bête,Zone VIP,Normal,170–195,MixMaster
+067,KingKilla,Métal,Zone VIP / Zoo drop,Normal,170–195,MixMaster
+068,JackLantern,Démon,Zone VIP,Normal,170–195,MixMaster
+069,NeoMortarRabbit,Bête,Zone VIP,Normal,174–199,MixMaster
+070,DarkDittSanta,Dragon,Zone VIP,Normal,174–199,MixMaster
+071,DarkPenrilSanta,Plante,Zone VIP,Normal,174–199,MixMaster
+072,DarkPhoySanta,Mystère,Zone VIP,Normal,174–199,MixMaster
+073,DarkJinSanta,Métal,Zone VIP,Normal,174–199,MixMaster
+074,ToxicRudolfSanta,Métal,Zone VIP,Normal,185–210,MixMaster
+075,GoldCutie,Bête,Zone VIP,Normal,191–216,MixMaster
+076,ShadowMagic,Mystère,Donjon de bravoure étage 3,Normal,160–185,MixMaster
