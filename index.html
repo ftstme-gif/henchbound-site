@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#4b176c">
 <meta name="description" content="Henchbound — bestiaire, héros, Henchs et aventures.">
 <title>Henchbound ✦ The Hench Chronicles</title>
-<link rel="stylesheet" href="styles.css?v=hb-20261102-catalogue1180-v2">
-<link rel="stylesheet" href="bestiary.css?v=hb-20261102-catalogue1180-v2">
+<link rel="stylesheet" href="styles.css?v=hb-20261102-heroes-carousel-v1">
+<link rel="stylesheet" href="bestiary.css?v=hb-20261102-heroes-carousel-v1">
 </head>
 <body>
 <div class="top-ribbon"><span>✦</span> THE HENCH CHRONICLES <span>✦</span> UN MONDE À DÉCOUVRIR <span>✦</span></div>
@@ -20,7 +20,21 @@
 <section class="hero-section">
   <div class="hero-sparkle sparkle-a">✦</div><div class="hero-sparkle sparkle-b">✧</div><div class="hero-sparkle sparkle-c">✦</div>
   <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-star">✦</span> MMORPG • COLLECTION • AVENTURE</div><h1>Un monde à<br><em>collectionner.</em></h1><p class="hero-intro">Des héros hauts en couleur, des créatures à rencontrer et des terres qui n’attendent que toi. Bienvenue dans <b>Henchbound</b> !</p><div class="hero-actions"><a class="button button-gold" href="#bestiary">Découvrir le bestiaire <span>→</span></a><a class="button button-white" href="#heroes">Rencontrer les héros</a></div><div class="hero-note"><span class="note-icon">✧</span><span><b>Un univers qui grandit avec toi</b><small>Héros, Henchs, zones et boss — tout reste à explorer.</small></span></div></div>
-  <div class="hero-showcase"><div class="showcase-glow"></div><div class="showcase-sticker sticker-top">★ TON ÉQUIPE T’ATTEND ★</div><img class="showcase-character" src="assets/heroes/naktsa.png" alt="Naktsa, l’archère de Henchbound"><div class="showcase-label"><span class="showcase-dot"></span><span><b>Naktsa</b><small>Archère • Les cinq héros</small></span><span class="label-spark">✦</span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="tiny-bubble bubble-one">Lv. 01</div><div class="tiny-bubble bubble-two">✦</div></div>
+  <div class="hero-showcase-wrap" id="hero-showcase-wrap">
+    <div class="hero-showcase" id="hero-showcase">
+      <div class="showcase-glow"></div><div class="showcase-sticker sticker-top">★ CHOISIS TON HÉROS ★</div>
+      <button type="button" class="hero-carousel-arrow hero-carousel-prev" id="hero-prev" aria-label="Héros précédent">‹</button>
+      <img class="showcase-character" id="showcase-character" src="assets/heroes/naktsa.png" alt="Naktsa, l’archère de Henchbound">
+      <button type="button" class="hero-carousel-arrow hero-carousel-next" id="hero-next" aria-label="Héros suivant">›</button>
+      <div class="showcase-label"><span class="showcase-dot"></span><span><b id="showcase-name">Naktsa</b><small id="showcase-role">Archère • Héros 04</small></span><span class="showcase-position" id="showcase-position">04 / 05</span><span class="label-spark">✦</span></div>
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="tiny-bubble bubble-one">Lv. 01</div><div class="tiny-bubble bubble-two">✦</div>
+    </div>
+    <div class="showcase-selector" id="hero-selector" aria-label="Choisir un héros"></div>
+    <article class="hero-bio" aria-live="polite" aria-atomic="true">
+      <div class="hero-bio-heading"><span>PORTRAIT DU HÉROS</span><h3 id="hero-bio-name">Naktsa</h3><small id="hero-bio-role">Archère</small></div>
+      <p id="hero-bio-description">Naktsa connaît les signes que les autres ne voient pas : une branche brisée, une trace dans la terre, le silence soudain des oiseaux. Son arc protège les chemins sauvages et son instinct lui permet de sentir la présence des Henchs.</p>
+    </article>
+  </div>
   <div class="scroll-hint"><span></span> DÉFILE POUR EXPLORER</div>
 </section>
 <section id="heroes" class="section heroes-section"><div class="section-heading"><div><span class="section-kicker">LES VISAGES DE L’AVENTURE</span><h2>La team <em>Henchbound</em></h2></div><p>Cinq héros, cinq personnalités, illustrés dans une même direction anime / fantasy.</p></div><div class="hero-grid" id="hero-grid"></div></section>
@@ -43,5 +57,5 @@
 </main>
 <dialog class="hench-modal" id="hench-modal" aria-labelledby="hench-modal-title"><div class="hench-modal-shell"><div class="hench-modal-art" id="hench-modal-art"><span class="modal-number" id="hench-modal-number">N° 000</span><button type="button" class="hench-modal-close" id="hench-modal-close" aria-label="Fermer la fiche">×</button><img id="hench-modal-image" class="hench-modal-image" alt="" hidden><div class="hench-modal-placeholder" id="hench-modal-placeholder"><span>✦</span><b>Portrait à associer</b><small>Le portrait officiel sera associé quand l’asset correspondant sera disponible.</small></div><span class="modal-art-status" id="hench-modal-art-status">NORMAL</span></div><div class="hench-modal-content"><span class="section-kicker">FICHE DU BESTIAIRE</span><h2 id="hench-modal-title">Nom du Hench</h2><div class="hench-modal-chips"><span class="modal-type" id="hench-modal-type">✦ Mystère</span><span class="modal-status" id="hench-modal-status">Normal</span></div><div class="hench-modal-stats"><div class="modal-stat"><small>NUMÉRO</small><strong id="hench-modal-stat-number">000</strong></div><div class="modal-stat"><small>PLAGE DE NIVEAUX</small><strong id="hench-modal-levels">À définir</strong></div><div class="modal-stat modal-stat-wide"><small>ZONE</small><strong id="hench-modal-zone">Zone à définir</strong></div></div><p class="hench-modal-note" id="hench-modal-note">Fiche de référence Henchbound.</p><p class="hench-modal-footnote">Les niveaux et habitats affichés correspondent aux données actuellement intégrées au bestiaire Henchbound.</p><button type="button" class="button button-gold modal-close-action" id="hench-modal-close-action">Retour au bestiaire <span>↩</span></button></div></div></dialog>
 <footer class="site-footer"><a class="brand footer-brand" href="#home"><img src="assets/brand/mark.svg" alt=""><span class="brand-words"><strong>HENCHBOUND</strong><small>THE HENCH CHRONICLES</small></span></a><span>HENCHBOUND • CATALOGUE Henchbound • BESTIAIRE EN CONSTRUCTION</span><a href="#home" class="back-top">Retour en haut ↑</a></footer>
-<script src="data.js?v=hb-20261102-catalogue1180-v2"></script><script src="app.js?v=hb-20261102-catalogue1180-v2"></script>
+<script src="data.js?v=hb-20261102-heroes-carousel-v1"></script><script src="app.js?v=hb-20261102-heroes-carousel-v1"></script>
 </body></html>
