@@ -9,6 +9,14 @@ const familiesTitle = document.querySelector("#families .section-heading h2");
 if (familiesTitle) familiesTitle.innerHTML = "Neuf types,<br><em>neuf familles.</em>";
 const familiesIntro = document.querySelector("#families .section-heading > p");
 if (familiesIntro) familiesIntro.textContent = "Les neuf familles de Henchbound : Plante, Dragon, Métal, Oiseau, Démon, Mystère, Bête, Insecte et Lumière.";
+const levelRules = document.querySelector("#level-rules");
+if (levelRules) levelRules.textContent = "9 types Henchbound • les créations originales viendront séparément";
+const familyFootnote = document.querySelector("#families .family-footnote");
+if (familyFootnote) familyFootnote.textContent = "✧ Les neuf catégories de Henchbound sont affichées ici. Les Henchs originaux seront ajoutés dans une seconde phase.";
+const modalFootnote = document.querySelector(".hench-modal-footnote");
+if (modalFootnote) modalFootnote.textContent = "Les niveaux et habitats affichés correspondent aux données actuellement intégrées au catalogue Henchbound.";
+const footerLabel = document.querySelector(".site-footer > span");
+if (footerLabel) footerLabel.textContent = "HENCHBOUND • CATALOGUE HENCHBOUND • BESTIAIRE EN CONSTRUCTION";
 
 const slugify = (value) => String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const typeByName = Object.fromEntries(DATA.types.map(t => [t.name, t]));
