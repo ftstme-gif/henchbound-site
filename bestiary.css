@@ -8,3 +8,11 @@
 .family-lumiere .family-symbol{background:#fff1a8;color:#9b7515;box-shadow:0 5px 0 #d5ad43}
 @media(max-width:1100px){.bestiary-category-bar{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:760px){.bestiary-category-bar{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.bestiary-category{min-width:0;padding:10px 8px}.bestiary-category b{font-size:11px}.bestiary-category small{font-size:8px}}
+
+
+/* Filtre de tranche de niveaux */
+.level-filter{display:flex;flex-direction:column;justify-content:center;gap:6px;color:#8b748f;font-size:10px;font-weight:900}
+.level-filter select{width:100%;min-height:42px;padding:10px 13px;border:2px solid #eadbc8;border-radius:13px;background:#fffdf9;color:#573568;font:inherit;font-size:12px;outline:none}
+.level-filter select:focus{border-color:#a86cc3;box-shadow:0 0 0 3px #e7d5ef}
+#bestiary-total{color:#67407c;font-weight:1000}
+@media(max-width:760px){.level-filter{gap:4px}.level-filter select{min-height:40px}}
