@@ -1,705 +1,103 @@
 window.HENCHBOUND_DATA = {
-  "heroes": [
-    {
-      "name": "Gladark",
-      "role": "Boxeur",
-      "tag": "Poings renforcés",
-      "file": "gladark.png"
-    },
-    {
-      "name": "Ryde",
-      "role": "Épéiste",
-      "tag": "Lame et courage",
-      "file": "ryde.png"
-    },
-    {
-      "name": "Sola",
-      "role": "Pistolet",
-      "tag": "Tir et précision",
-      "file": "sola.png"
-    },
-    {
-      "name": "Naktsa",
-      "role": "Archère",
-      "tag": "Instinct et nature",
-      "file": "naktsa.png"
-    },
-    {
-      "name": "Zinhual",
-      "role": "Sanglier humain",
-      "tag": "Force bestiale",
-      "file": "zinhual.png"
-    }
+  heroes: [
+    { name: "Gladark", role: "Boxeur", tag: "Poings renforcés", file: "gladark.png" },
+    { name: "Ryde", role: "Épéiste", tag: "Lame et courage", file: "ryde.png" },
+    { name: "Sola", role: "Pistolet", tag: "Tir et précision", file: "sola.png" },
+    { name: "Naktsa", role: "Archère", tag: "Instinct et nature", file: "naktsa.png" },
+    { name: "Zinhual", role: "Sanglier humain", tag: "Force bestiale", file: "zinhual.png" }
   ],
-  "types": [
-    {
-      "name": "Plante",
-      "number": "01",
-      "symbol": "✿",
-      "color": "green"
-    },
-    {
-      "name": "Dragon",
-      "number": "02",
-      "symbol": "♢",
-      "color": "coral"
-    },
-    {
-      "name": "Métal",
-      "number": "03",
-      "symbol": "⚙",
-      "color": "silver"
-    },
-    {
-      "name": "Oiseau",
-      "number": "04",
-      "symbol": "⌁",
-      "color": "sky"
-    },
-    {
-      "name": "Démon",
-      "number": "05",
-      "symbol": "☾",
-      "color": "rose"
-    },
-    {
-      "name": "Mystère",
-      "number": "06",
-      "symbol": "✦",
-      "color": "violet"
-    },
-    {
-      "name": "Bête",
-      "number": "07",
-      "symbol": "♧",
-      "color": "orange"
-    },
-    {
-      "name": "Insecte",
-      "number": "08",
-      "symbol": "❋",
-      "color": "lime"
-    },
-    {
-      "name": "Lumière",
-      "number": "09",
-      "symbol": "☼",
-      "color": "gold"
-    },
-    {
-      "name": "Feu",
-      "number": "10",
-      "symbol": "♨",
-      "color": "fire"
-    },
-    {
-      "name": "Eau",
-      "number": "11",
-      "symbol": "≈",
-      "color": "water"
-    }
+  types: [
+    { name: "Plante", number: "01", symbol: "✿", color: "green" },
+    { name: "Dragon", number: "02", symbol: "♢", color: "coral" },
+    { name: "Métal", number: "03", symbol: "⚙", color: "silver" },
+    { name: "Oiseau", number: "04", symbol: "⌁", color: "sky" },
+    { name: "Démon", number: "05", symbol: "☾", color: "rose" },
+    { name: "Mystère", number: "06", symbol: "✦", color: "violet" },
+    { name: "Bête", number: "07", symbol: "♧", color: "orange" },
+    { name: "Insecte", number: "08", symbol: "❋", color: "lime" }
   ],
-  "rules": {
-    "henchLevelCap": 300,
-    "levelBandWidth": 25,
-    "maxHeroHenchLevelGap": 15,
-    "note": "Niveau maximum Hench : 300. Écart entre le héros et son Hench : 15 niveaux maximum. Les tranches de 25 niveaux sont des paliers de référence ; les niveaux propres à chaque espèce restent à confirmer."
+  rules: {
+    henchLevelCap: 250,
+    levelBandWidth: 25,
+    maxHeroHenchLevelGap: 15,
+    note: "Catalogue MixMaster : niveaux de base et niveaux maximum vérifiés à partir des bases publiques MixMaster. Les niveaux affichés sont ceux de l'espèce, pas ceux d'un exemplaire individuel."
   },
-  "bestiary": [
-    {
-      "id": "001",
-      "name": "Koru",
-      "type": "Mystère",
-      "zone": "Départ",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/001_koru.webp",
-      "portraitStatus": "Portrait associé — Hench exclusif à Gladark",
-      "exclusiveHero": "Gladark"
-    },
-    {
-      "id": "002",
-      "name": "Bralys",
-      "type": "Insecte",
-      "zone": "Départ",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/002_bralys.webp",
-      "portraitStatus": "Portrait associé — Hench exclusif à Ryde",
-      "exclusiveHero": "Ryde"
-    },
-    {
-      "id": "003",
-      "name": "Miru",
-      "type": "Métal",
-      "zone": "Départ",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/003_miru.webp",
-      "portraitStatus": "Portrait associé — Hench exclusif à Sola",
-      "exclusiveHero": "Sola"
-    },
-    {
-      "id": "004",
-      "name": "Vylom",
-      "type": "Oiseau",
-      "zone": "Départ",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/004_vylom.webp",
-      "portraitStatus": "Portrait associé — Hench exclusif à Naktsa",
-      "exclusiveHero": "Naktsa"
-    },
-    {
-      "id": "005",
-      "name": "Thogg",
-      "type": "Bête",
-      "zone": "Départ",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/005_thogg.webp",
-      "portraitStatus": "Portrait associé — Hench exclusif à Zinhual",
-      "exclusiveHero": "Zinhual"
-    },
-    {
-      "id": "006",
-      "name": "Feuilleto",
-      "type": "Plante",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "007",
-      "name": "Drakelys",
-      "type": "Dragon",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "008",
-      "name": "Ferrac",
-      "type": "Métal",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "009",
-      "name": "Plumet",
-      "type": "Oiseau",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "010",
-      "name": "Démonix",
-      "type": "Démon",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "011",
-      "name": "Mystifée",
-      "type": "Mystère",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "012",
-      "name": "Bestigon",
-      "type": "Bête",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "013",
-      "name": "Scaravolt",
-      "type": "Insecte",
-      "zone": "Prairie des Aulnes",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "014",
-      "name": "Gardien des Aulnes",
-      "type": "Plante",
-      "zone": "Prairie des Aulnes",
-      "status": "BOSS",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/014_gardien-des-aulnes.webp",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "015",
-      "name": "Scoriabeille",
-      "type": "Insecte",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "016",
-      "name": "Cendrelis",
-      "type": "À confirmer",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "017",
-      "name": "Roncebraise",
-      "type": "Plante",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "018",
-      "name": "Brasombre",
-      "type": "Démon",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "019",
-      "name": "Scorvarg",
-      "type": "Bête",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "020",
-      "name": "Vulcacier",
-      "type": "Métal",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "021",
-      "name": "Magmoryx",
-      "type": "Dragon",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "022",
-      "name": "Fumélis",
-      "type": "À confirmer",
-      "zone": "Mont des Cendres",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "023",
-      "name": "Coralys",
-      "type": "Insecte",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "024",
-      "name": "Maréaile",
-      "type": "Oiseau",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "025",
-      "name": "Abyssolia",
-      "type": "Plante",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "026",
-      "name": "Noxalgue",
-      "type": "Démon",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "027",
-      "name": "Nérévar",
-      "type": "Bête",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "028",
-      "name": "Nautiron",
-      "type": "Métal",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "029",
-      "name": "Thalassyr",
-      "type": "Dragon",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "030",
-      "name": "Vortexia",
-      "type": "Mystère",
-      "zone": "Îles Oubliées",
-      "status": "Normal",
-      "typeConfirmed": false,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "031",
-      "name": "Aetherix",
-      "type": "Mystère",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "032",
-      "name": "Fangor",
-      "type": "Bête",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "033",
-      "name": "Ironclad",
-      "type": "Métal",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "034",
-      "name": "Pyraptor",
-      "type": "Dragon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "035",
-      "name": "Sylv'Goliath",
-      "type": "Plante",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": null,
-      "portraitStatus": "Portrait à associer"
-    },
-    {
-      "id": "036",
-      "name": "Skarabok",
-      "type": "Insecte",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/036_skarabok.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "037",
-      "name": "Solarix",
-      "type": "Lumière",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/037_solarix.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "038",
-      "name": "Malakor",
-      "type": "Démon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/038_malakor.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "039",
-      "name": "Pirot",
-      "type": "Mystère",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/039_pirot.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "040",
-      "name": "Drayo",
-      "type": "Dragon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/040_drayo.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "041",
-      "name": "P'tit-Bourgeon",
-      "type": "Plante",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/041_ptit-bourgeon.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "042",
-      "name": "Bolt",
-      "type": "Métal",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/042_bolt.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "043",
-      "name": "Pipix",
-      "type": "Oiseau",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/043_pipix.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "044",
-      "name": "Noky",
-      "type": "Bête",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/044_noky.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "045",
-      "name": "Sparky",
-      "type": "Lumière",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/045_sparky.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "046",
-      "name": "Impix",
-      "type": "Démon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/046_impix.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "047",
-      "name": "Buggy",
-      "type": "Insecte",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/047_buggy.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "048",
-      "name": "Mystix",
-      "type": "Mystère",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/048_mystix.png",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "049",
-      "name": "Ombrelys",
-      "type": "Démon",
-      "zone": "Forêt Brumeuse",
-      "status": "BOSS",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/049_ombrelys.webp",
-      "portraitStatus": "Portrait associé — fiche détaillée disponible"
-    },
-    {
-      "id": "050",
-      "name": "Draco",
-      "type": "Dragon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/050_draco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "051",
-      "name": "Devilco",
-      "type": "Démon",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/051_devilco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "052",
-      "name": "Beasco",
-      "type": "Bête",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/052_beasco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "053",
-      "name": "Birdco",
-      "type": "Oiseau",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/053_birdco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "054",
-      "name": "Inseco",
-      "type": "Insecte",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/054_inseco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "055",
-      "name": "Flowco",
-      "type": "Plante",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/055_flowco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "056",
-      "name": "Mysco",
-      "type": "Mystère",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/056_mysco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "057",
-      "name": "Metaco",
-      "type": "Métal",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/057_metaco.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "058",
-      "name": "MixDestroyer",
-      "type": "Métal",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/058_mixdestroyer.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    },
-    {
-      "id": "059",
-      "name": "NeoToxicKalinAngel",
-      "type": "Oiseau",
-      "zone": "À définir",
-      "status": "Normal",
-      "typeConfirmed": true,
-      "portrait": "assets/henchs/059_neotoxic-kalin-angel.webp",
-      "portraitStatus": "Portrait HD optimisé pour le site — Hench MixMaster, DA Henchbound validée"
-    }
+  bestiary: [
+    { id:"001", name:"Draco", type:"Dragon", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"002", name:"Devilco", type:"Démon", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"003", name:"Beasco", type:"Bête", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"004", name:"Birdco", type:"Oiseau", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"005", name:"Inseco", type:"Insecte", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"006", name:"Flowco", type:"Plante", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"007", name:"Mysco", type:"Mystère", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"008", name:"Metaco", type:"Métal", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"009", name:"Vanyah", type:"Dragon", zone:"Hench de quête / hors carte", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"MixMaster" },
+    { id:"010", name:"Pikey", type:"Dragon", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"011", name:"Rurabbi", type:"Démon", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"012", name:"Rabbo", type:"Bête", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"013", name:"Chicoe", type:"Oiseau", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"014", name:"Pee", type:"Insecte", zone:"Nord / Est de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"015", name:"Manglock", type:"Plante", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"016", name:"Ukki", type:"Mystère", zone:"Nord de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"017", name:"Metalocks", type:"Métal", zone:"Nord / Est de Magirita", status:"Normal", levelMin:3, levelMax:28, typeConfirmed:true, source:"MixMaster" },
+    { id:"018", name:"Imon", type:"Dragon", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"019", name:"Bebe", type:"Démon", zone:"Rivage oriental / Prairie centrale de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"020", name:"Goa", type:"Bête", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"021", name:"Caminho", type:"Oiseau", zone:"Prairie centrale de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"022", name:"Bookworm", type:"Insecte", zone:"Mekrita / zones de bas niveau", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"023", name:"Jamoo", type:"Plante", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"024", name:"NortsNcross", type:"Mystère", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"025", name:"BigMaq", type:"Démon", zone:"Rivage oriental / Prairie centrale de Mekrita", status:"Normal", levelMin:5, levelMax:30, typeConfirmed:true, source:"MixMaster" },
+    { id:"026", name:"Noa", type:"Dragon", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"027", name:"Buma", type:"Démon", zone:"Prairie centrale de Mekrita", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"028", name:"Nosie", type:"Bête", zone:"Rivage oriental / Prairie centrale de Mekrita", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"029", name:"Pengie", type:"Oiseau", zone:"Prairie centrale de Mekrita", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"030", name:"SnakeEye", type:"Insecte", zone:"Mekrita / zones de bas niveau", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"031", name:"Mameo", type:"Plante", zone:"Mekrita / zones de bas niveau", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"032", name:"RingWorm", type:"Mystère", zone:"Rivage oriental de Mekrita", status:"Normal", levelMin:7, levelMax:32, typeConfirmed:true, source:"MixMaster" },
+    { id:"033", name:"Fennecus", type:"Bête", zone:"Nord de Magirita", status:"Normal", levelMin:110, levelMax:135, typeConfirmed:true, source:"MixMaster" },
+    { id:"034", name:"NeoBoxter", type:"Mystère", zone:"Zone VIP et nombreuses zones haut niveau", status:"Normal", levelMin:130, levelMax:155, typeConfirmed:true, source:"MixMaster" },
+    { id:"035", name:"Seki-Shu-Ryu", type:"Dragon", zone:"Donjon de Rudis / Chambre des dragons", status:"Normal", levelMin:102, levelMax:127, typeConfirmed:true, source:"MixMaster" },
+    { id:"036", name:"Wagstuff", type:"Bête", zone:"Chambres Dragon / Métal / Oiseau / Plante", status:"Normal", levelMin:89, levelMax:114, typeConfirmed:true, source:"MixMaster" },
+    { id:"037", name:"EvilClaw", type:"Bête", zone:"Marais de l'illusion / chambres élémentaires", status:"Normal", levelMin:100, levelMax:125, typeConfirmed:true, source:"MixMaster" },
+    { id:"038", name:"GreenTravel", type:"Bête", zone:"Chambres élémentaires", status:"Normal", levelMin:94, levelMax:119, typeConfirmed:true, source:"MixMaster" },
+    { id:"039", name:"WhiteWags", type:"Bête", zone:"Chambres élémentaires", status:"Normal", levelMin:104, levelMax:129, typeConfirmed:true, source:"MixMaster" },
+    { id:"040", name:"MintLion", type:"Bête", zone:"Rivage blanc", status:"Normal", levelMin:106, levelMax:131, typeConfirmed:true, source:"MixMaster" },
+    { id:"041", name:"Snowfoxy", type:"Bête", zone:"Ruines de Purmai", status:"Normal", levelMin:112, levelMax:137, typeConfirmed:true, source:"MixMaster" },
+    { id:"042", name:"Rhine", type:"Bête", zone:"Donjon de Lunacy", status:"Normal", levelMin:119, levelMax:144, typeConfirmed:true, source:"MixMaster" },
+    { id:"043", name:"Blue Piggy", type:"Bête", zone:"Forêt d'Iskai", status:"Normal", levelMin:125, levelMax:150, typeConfirmed:true, source:"MixMaster" },
+    { id:"044", name:"Pumpkin", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:114, levelMax:139, typeConfirmed:true, source:"MixMaster" },
+    { id:"045", name:"EvilTree", type:"Plante", zone:"Zone VIP", status:"Normal", levelMin:114, levelMax:139, typeConfirmed:true, source:"MixMaster" },
+    { id:"046", name:"Rudolf", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:120, levelMax:145, typeConfirmed:true, source:"MixMaster" },
+    { id:"047", name:"MutantRudolf", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:130, levelMax:155, typeConfirmed:true, source:"MixMaster" },
+    { id:"048", name:"Snowman", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:140, levelMax:165, typeConfirmed:true, source:"MixMaster" },
+    { id:"049", name:"DarkMameo", type:"Démon", zone:"Zone VIP / Deuxième sous-sol maudit", status:"Normal", levelMin:150, levelMax:175, typeConfirmed:true, source:"MixMaster" },
+    { id:"050", name:"ToxicSantaBear", type:"Oiseau", zone:"Zone VIP", status:"Normal", levelMin:150, levelMax:175, typeConfirmed:true, source:"MixMaster" },
+    { id:"051", name:"Mini Pumpkin Doll", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:155, levelMax:180, typeConfirmed:true, source:"MixMaster" },
+    { id:"052", name:"StrongRudolf", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:155, levelMax:180, typeConfirmed:true, source:"MixMaster" },
+    { id:"053", name:"PumpkinMonster", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:158, levelMax:183, typeConfirmed:true, source:"MixMaster" },
+    { id:"054", name:"DittSanta", type:"Dragon", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"055", name:"NeoVanyah", type:"Dragon", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"056", name:"Demoniac Soul Eater", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"057", name:"NeoFennecus", type:"Bête", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"058", name:"NeoStrigidae", type:"Oiseau", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"059", name:"PenrilSanta", type:"Plante", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"060", name:"PhoySanta", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"061", name:"JinSanta", type:"Métal", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"062", name:"NeoMechaOstrich", type:"Métal", zone:"Zone VIP", status:"Normal", levelMin:164, levelMax:189, typeConfirmed:true, source:"MixMaster" },
+    { id:"063", name:"MutantBabyWolfSanta", type:"Bête", zone:"Zone VIP", status:"Normal", levelMin:166, levelMax:191, typeConfirmed:true, source:"MixMaster" },
+    { id:"064", name:"RudolfSanta", type:"Métal", zone:"Zone VIP", status:"Normal", levelMin:166, levelMax:191, typeConfirmed:true, source:"MixMaster" },
+    { id:"065", name:"Pumpkin Doll", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:168, levelMax:193, typeConfirmed:true, source:"MixMaster" },
+    { id:"066", name:"Wolf Santa", type:"Bête", zone:"Zone VIP", status:"Normal", levelMin:170, levelMax:195, typeConfirmed:true, source:"MixMaster" },
+    { id:"067", name:"KingKilla", type:"Métal", zone:"Zone VIP / Zoo drop", status:"Normal", levelMin:170, levelMax:195, typeConfirmed:true, source:"MixMaster" },
+    { id:"068", name:"JackLantern", type:"Démon", zone:"Zone VIP", status:"Normal", levelMin:170, levelMax:195, typeConfirmed:true, source:"MixMaster" },
+    { id:"069", name:"NeoMortarRabbit", type:"Bête", zone:"Zone VIP", status:"Normal", levelMin:174, levelMax:199, typeConfirmed:true, source:"MixMaster" },
+    { id:"070", name:"DarkDittSanta", type:"Dragon", zone:"Zone VIP", status:"Normal", levelMin:174, levelMax:199, typeConfirmed:true, source:"MixMaster" },
+    { id:"071", name:"DarkPenrilSanta", type:"Plante", zone:"Zone VIP", status:"Normal", levelMin:174, levelMax:199, typeConfirmed:true, source:"MixMaster" },
+    { id:"072", name:"DarkPhoySanta", type:"Mystère", zone:"Zone VIP", status:"Normal", levelMin:174, levelMax:199, typeConfirmed:true, source:"MixMaster" },
+    { id:"073", name:"DarkJinSanta", type:"Métal", zone:"Zone VIP", status:"Normal", levelMin:174, levelMax:199, typeConfirmed:true, source:"MixMaster" },
+    { id:"074", name:"ToxicRudolfSanta", type:"Métal", zone:"Zone VIP", status:"Normal", levelMin:185, levelMax:210, typeConfirmed:true, source:"MixMaster" },
+    { id:"075", name:"GoldCutie", type:"Bête", zone:"Zone VIP", status:"Normal", levelMin:191, levelMax:216, typeConfirmed:true, source:"MixMaster" },
+    { id:"076", name:"ShadowMagic", type:"Mystère", zone:"Donjon de bravoure étage 3", status:"Normal", levelMin:160, levelMax:185, typeConfirmed:true, source:"MixMaster" }
   ]
 };
