@@ -23,6 +23,17 @@ window.HENCHBOUND_PORTRAIT_OVERRIDES = {
   "Rabie": "https://i.imgur.com/mm6f0tI.png",
   "ArnDev": "https://i.imgur.com/ynDhh92.png",
   "Mahollow": "https://i.imgur.com/XVd7gla.png",
+  "Pikey": "https://i.imgur.com/qUcWR0m.png",
+  "Imon": "https://i.imgur.com/Ju4fI7o.png",
+  "Noa": "https://i.imgur.com/zfoRl8X.png",
+  "Draki": "https://i.imgur.com/vwr8Zjm.png",
+  "Gago": "https://i.imgur.com/BvLonev.png",
+  "Bigon": "https://i.imgur.com/fP22Sm4.png",
+  "SQ-21": "https://i.imgur.com/cfgLKo5.png",
+  "Kurma": "https://i.imgur.com/BOWPndf.png",
+  "Manglock": "https://i.imgur.com/tH43bAw.png",
+  "Jamoo": "https://i.imgur.com/35yldHR.png",
+  "Mameo": "https://i.imgur.com/ql4LA5p.png",
 };
 
 function applyPortraitOverrides(root = document) {
