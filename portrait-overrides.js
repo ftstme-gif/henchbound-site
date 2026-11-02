@@ -1,5 +1,5 @@
-// Verified public MixMaster sprite references currently available.
-// Temporary remote sources until original ShadowRise sprite assets are imported locally.
+// Sources publiques vérifiées : vrais portraits de monstres, pas des captures de fiches.
+// Les autres Henchs utilisent pour l'instant leur asset local quand il existe.
 window.HENCHBOUND_PORTRAIT_OVERRIDES = {
   "Draco": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgHCcCqCpEuLR-g8AnYwLNVKh_8Hmd_hsIUcDQee3QboXSWm36jG23jZKRgeC53fv5p2CrrVpBm2Qfy2MkRvFI7eO5cJyaiaLYsqYvfpfdI5u9M9FJ-iqZpjE60LerIj4SC0ODsXikjIY/s44/01_monster001.gif",
   "Devilco": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhctSO7Ut4RlMDlybp5mgnWTvIwn2WrcWPNMThwc9JDEEQk0TLdOpck1XaUq5kVbZQs24tCvbexIJ84ACYv1VFT1FStwsMUWrbWW0zEW8nljyU01jLEu882wcPT-qvimzmQDDsFvuGW0/s45/01_monster002.gif",
@@ -11,39 +11,7 @@ window.HENCHBOUND_PORTRAIT_OVERRIDES = {
   "Rurabbi": "https://i.imgur.com/CYTrZl9.png",
   "Bebe": "https://i.imgur.com/P4wATWU.png",
   "Buma": "https://i.imgur.com/2V1MK0G.png",
-  "PoochDev": "https://i.imgur.com/fjA2Mxp.png",
-  "Marogni": "https://i.imgur.com/Lk8Rn0m.png",
-  "Turton": "https://i.imgur.com/J6D6rro.png",
-  "Pirosty": "https://i.imgur.com/3SeYLSw.png",
-  "SunEack": "https://i.imgur.com/krKLyJU.png",
-  "CheezDogg": "https://i.imgur.com/uNQBIe2.png",
-  "Monggyal": "https://i.imgur.com/sRdunue.png",
-  "WildBuma": "https://i.imgur.com/AWNdVcX.png",
-  "MoonRaid": "https://i.imgur.com/AR5RGBz.png",
-  "Rabie": "https://i.imgur.com/mm6f0tI.png",
-  "ArnDev": "https://i.imgur.com/ynDhh92.png",
-  "Mahollow": "https://i.imgur.com/XVd7gla.png",
-  "Pikey": "https://i.imgur.com/qUcWR0m.png",
-  "Imon": "https://i.imgur.com/Ju4fI7o.png",
-  "Noa": "https://i.imgur.com/zfoRl8X.png",
-  "Draki": "https://i.imgur.com/vwr8Zjm.png",
-  "Gago": "https://i.imgur.com/BvLonev.png",
-  "Bigon": "https://i.imgur.com/fP22Sm4.png",
-  "SQ-21": "https://i.imgur.com/cfgLKo5.png",
-  "Kurma": "https://i.imgur.com/BOWPndf.png",
-  "Manglock": "https://i.imgur.com/tH43bAw.png",
-  "Jamoo": "https://i.imgur.com/35yldHR.png",
-  "Mameo": "https://i.imgur.com/ql4LA5p.png",
-  "Chicoe": "https://i.imgur.com/qIFarMx.png",
-  "Caminho": "https://i.imgur.com/jcp7gMR.png",
-  "Pengie": "https://i.imgur.com/zjx5fhu.png",
-  "MelonFlyer": "https://i.imgur.com/u11UHKg.png",
-  "DooDoo": "https://i.imgur.com/p8G5F9r.png",
-  "Starbird": "https://i.imgur.com/f87CvGR.png",
-  "ForceFlyer": "https://i.imgur.com/xYEeQEP.png",
-  "HighLife": "https://i.imgur.com/xVQn4LY.png",
-  "Brubli": "https://i.imgur.com/6ON4mcL.png",
-  "NightTime": "https://i.imgur.com/pNtDEG7.png"
+  "PoochDev": "https://i.imgur.com/fjA2Mxp.png"
 };
 
 function applyPortraitOverrides(root = document) {
