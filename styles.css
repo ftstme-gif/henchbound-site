@@ -62,7 +62,7 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}
 
 
 /* Bestiaire complet — 49 fiches, portraits individuels uniquement. */
-.family-grid{grid-template-columns:repeat(11,minmax(0,1fr))}
+.family-grid{grid-template-columns:repeat(9,minmax(0,1fr))}
 .family-fire .family-symbol{color:#c74f34;background:#ffe1d4}
 .family-eau .family-symbol{color:#2378b4;background:#d8f0ff}
 .family-lumiere .family-symbol{color:#a47710}
