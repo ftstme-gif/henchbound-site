@@ -57,7 +57,7 @@ function getTypeItems(typeName) {
   const range = levelRangeFilter?.value || "all";
   const [rangeMin, rangeMax] = range === "all" ? [null, null] : range.split("-").map(Number);
   return DATA.bestiary.filter(item => item.type === typeName)
-    .filter(item => range === "all" || (item.levelMin >= rangeMin && item.levelMin <= rangeMax))
+    .filter(item => range === "all" || (item.levelMax >= rangeMin && item.levelMin <= rangeMax))
     .filter(item => !query || [item.id, item.name, item.zone, item.status, item.source].join(" ").toLowerCase().includes(query))
     .sort((a, b) => (a.levelMin ?? 9999) - (b.levelMin ?? 9999) || a.name.localeCompare(b.name));
 }
