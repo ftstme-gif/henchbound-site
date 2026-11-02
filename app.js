@@ -1,6 +1,5 @@
 const DATA = window.HENCHBOUND_DATA;
 
-// Type secret Henchbound : aucun Hench pour le moment, mais la famille est réservée.
 if (!DATA.types.some(t => t.name === "Lumière")) {
   DATA.types.push({ name: "Lumière", number: "09", symbol: "☀", color: "gold" });
 }
@@ -13,7 +12,6 @@ if (familiesIntro) familiesIntro.textContent = "Les huit familles historiques de
 
 const slugify = (value) => String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const typeByName = Object.fromEntries(DATA.types.map(t => [t.name, t]));
-
 const heroGrid = $("#hero-grid");
 if (heroGrid) heroGrid.innerHTML = DATA.heroes.map((h, i) => `
   <article class="hero-card"><div class="hero-art"><span class="hero-number">HÉROS 0${i + 1}</span><img class="hero-portrait" src="${h.image || ("assets/heroes/" + h.file)}" alt="${h.name}, ${h.role}"></div>
@@ -38,10 +36,13 @@ function levelRangeFor(item) {
   return "À définir";
 }
 
+function portraitFor(item) {
+  return item.portrait || `assets/henchs/${item.id}_${slugify(item.name)}.webp`;
+}
+
 function getTypeItems(typeName) {
   const query = search?.value.trim().toLowerCase() || "";
-  return DATA.bestiary
-    .filter(item => item.type === typeName)
+  return DATA.bestiary.filter(item => item.type === typeName)
     .filter(item => !query || [item.id, item.name, item.zone, item.status, item.source].join(" ").toLowerCase().includes(query))
     .sort((a, b) => (a.levelMin ?? 9999) - (b.levelMin ?? 9999) || a.name.localeCompare(b.name));
 }
@@ -74,7 +75,9 @@ function openHenchSheet(item) {
   image.onload = () => { image.hidden = false; placeholder.hidden = true; };
   image.onerror = () => { image.hidden = true; placeholder.hidden = false; };
   image.alt = item.name;
-  if (item.portrait) { image.hidden = true; placeholder.hidden = false; image.src = item.portrait; } else { image.removeAttribute("src"); image.hidden = true; placeholder.hidden = false; }
+  image.hidden = true;
+  placeholder.hidden = false;
+  image.src = portraitFor(item);
   if (typeof modal.showModal === "function") modal.showModal(); else modal.setAttribute("open", "");
 }
 
@@ -90,15 +93,14 @@ function renderBestiary() {
   if (!bestiaryList) return;
   bestiaryList.innerHTML = results.map(item => `
     <article class="hench-row" data-hench-id="${item.id}" tabindex="0" role="button" aria-label="Ouvrir la fiche de ${item.name}">
+      <span class="hench-row-art"><img src="${portraitFor(item)}" alt="${item.name}" loading="lazy" onerror="this.parentElement.classList.add('portrait-missing');this.remove()"><span>✦</span></span>
       <span class="hench-row-number">N° ${item.id}</span>
       <span class="hench-row-main"><strong>${item.name}${item.status === "BOSS" ? `<span class="hench-row-status">BOSS</span>` : ""}</strong><small>${item.zone || "Zone à définir"}</small></span>
       <span class="hench-row-level">Lv. ${levelRangeFor(item)}</span>
     </article>`).join("");
-  emptyState.hidden = results.length > 0;
-  if (selectedType === "Lumière" && results.length === 0) {
-    emptyState.textContent = "Aucun Hench Lumière pour le moment. La catégorie est volontairement réservée.";
-  } else {
-    emptyState.textContent = "Aucun Hench ne correspond à cette recherche.";
+  if (emptyState) {
+    emptyState.hidden = results.length > 0;
+    emptyState.textContent = selectedType === "Lumière" ? "Aucun Hench Lumière pour le moment. La catégorie est volontairement réservée." : "Aucun Hench ne correspond à cette recherche.";
   }
 }
 
@@ -109,16 +111,8 @@ function selectType(typeName, scrollIntoView = false) {
   if (scrollIntoView) $("#bestiary")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-categories?.addEventListener("click", event => {
-  const button = event.target.closest("[data-type]");
-  if (button) selectType(button.dataset.type);
-});
-
-familyGrid?.addEventListener("click", event => {
-  const button = event.target.closest("[data-select-type]");
-  if (button) selectType(button.dataset.selectType, true);
-});
-
+categories?.addEventListener("click", event => { const button = event.target.closest("[data-type]"); if (button) selectType(button.dataset.type); });
+familyGrid?.addEventListener("click", event => { const button = event.target.closest("[data-select-type]"); if (button) selectType(button.dataset.selectType, true); });
 search?.addEventListener("input", renderBestiary);
 
 bestiaryList?.addEventListener("click", event => {
@@ -141,5 +135,4 @@ const detailModal = $("#hench-modal");
 $("#hench-modal-close")?.addEventListener("click", () => detailModal.close());
 $("#hench-modal-close-action")?.addEventListener("click", () => detailModal.close());
 detailModal?.addEventListener("click", event => { if (event.target === detailModal) detailModal.close(); });
-
 renderBestiary();
