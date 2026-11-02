@@ -1,5 +1,16 @@
 const DATA = window.HENCHBOUND_DATA;
-const $ = (s) => document.querySelector(s);
+
+// Type secret Henchbound : aucun Hench pour le moment, mais la famille est réservée.
+if (!DATA.types.some(t => t.name === "Lumière")) {
+  DATA.types.push({ name: "Lumière", number: "09", symbol: "☀", color: "gold" });
+}
+
+document.querySelector('.main-nav a[href="#families"]')?.replaceChildren(document.createTextNode("9 types"));
+const familiesTitle = document.querySelector("#families .section-heading h2");
+if (familiesTitle) familiesTitle.innerHTML = "Neuf types,<br><em>neuf familles.</em>";
+const familiesIntro = document.querySelector("#families .section-heading > p");
+if (familiesIntro) familiesIntro.textContent = "Les huit familles historiques de MixMaster, plus une mystérieuse neuvième famille réservée à Henchbound : Lumière.";
+
 const slugify = (value) => String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const typeByName = Object.fromEntries(DATA.types.map(t => [t.name, t]));
 
@@ -84,6 +95,11 @@ function renderBestiary() {
       <span class="hench-row-level">Lv. ${levelRangeFor(item)}</span>
     </article>`).join("");
   emptyState.hidden = results.length > 0;
+  if (selectedType === "Lumière" && results.length === 0) {
+    emptyState.textContent = "Aucun Hench Lumière pour le moment. La catégorie est volontairement réservée.";
+  } else {
+    emptyState.textContent = "Aucun Hench ne correspond à cette recherche.";
+  }
 }
 
 function selectType(typeName, scrollIntoView = false) {
