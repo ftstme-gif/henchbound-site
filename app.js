@@ -8,7 +8,7 @@ document.querySelector('.main-nav a[href="#families"]')?.replaceChildren(documen
 const familiesTitle = document.querySelector("#families .section-heading h2");
 if (familiesTitle) familiesTitle.innerHTML = "Neuf types,<br><em>neuf familles.</em>";
 const familiesIntro = document.querySelector("#families .section-heading > p");
-if (familiesIntro) familiesIntro.textContent = "Les huit familles historiques de MixMaster, plus une mystérieuse neuvième famille réservée à Henchbound : Lumière.";
+if (familiesIntro) familiesIntro.textContent = "Les neuf familles de Henchbound : Plante, Dragon, Métal, Oiseau, Démon, Mystère, Bête, Insecte et Lumière.";
 
 const slugify = (value) => String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const typeByName = Object.fromEntries(DATA.types.map(t => [t.name, t]));
@@ -65,10 +65,10 @@ function openHenchSheet(item) {
   $("#hench-modal-title").textContent = item.name;
   $("#hench-modal-type").textContent = `${typeInfo?.symbol || "?"} ${item.type}`;
   $("#hench-modal-status").textContent = item.status;
-  $("#hench-modal-art-status").textContent = item.status === "BOSS" ? "BOSS UNIQUE" : "HENCH MIXMASTER";
+  $("#hench-modal-art-status").textContent = item.status === "BOSS" ? "BOSS UNIQUE" : "HENCHBOUND";
   $("#hench-modal-zone").textContent = item.zone || "Zone à définir";
   $("#hench-modal-levels").textContent = levelRangeFor(item);
-  $("#hench-modal-note").textContent = `${item.name} • ${item.type} • niveau ${levelRangeFor(item)} • source : ${item.source || "MixMaster"}.`;
+  $("#hench-modal-note").textContent = `${item.name} • ${item.type} • niveau ${levelRangeFor(item)} • catalogue Henchbound.`;
   modal.classList.toggle("modal-boss", item.status === "BOSS");
   $("#hench-modal-status").classList.toggle("status-boss", item.status === "BOSS");
   $("#hench-modal-status").classList.toggle("status-normal", item.status !== "BOSS");
@@ -88,7 +88,7 @@ function renderBestiary() {
   renderCategories();
   if (typeTitle) typeTitle.textContent = selectedType;
   if (typeCount) typeCount.textContent = `${results.length} / ${allInType.length} Henchs de type ${selectedType}`;
-  if (collectionTitle) collectionTitle.textContent = `${typeInfo?.symbol || "✦"} ${selectedType} — catalogue MixMaster`;
+  if (collectionTitle) collectionTitle.textContent = `${typeInfo?.symbol || "✦"} ${selectedType} — catalogue Henchbound`;
   if (resultCount) resultCount.textContent = `${results.length} affichés`;
   if (!bestiaryList) return;
   bestiaryList.innerHTML = results.map(item => `
