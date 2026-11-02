@@ -21,7 +21,7 @@ window.HENCHBOUND_DATA = {
     henchLevelCap: 250,
     levelBandWidth: 25,
     maxHeroHenchLevelGap: 15,
-    note: "Catalogue Henchbound : niveaux de base et niveaux maximum vérifiés à partir des bases publiques Henchbound. Les niveaux affichés sont ceux de l'espèce, pas ceux d'un exemplaire individuel."
+    note: "Références : MixMaster Database (Joyple) et listes MixTree. Les habitats non confirmés restent explicitement marqués. Les plages affichées sont celles des espèces sources et ne modifient pas le plafond de progression propre à Henchbound."
   },
   bestiary: [
     { id:"001", name:"Draco", type:"Dragon", zone:"Zone de tutoriel / Nord de Magirita", status:"Normal", levelMin:1, levelMax:26, typeConfirmed:true, source:"Joyple DB" },
