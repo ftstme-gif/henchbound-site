@@ -9,27 +9,38 @@ if (heroGrid) heroGrid.innerHTML = DATA.heroes.map((h, i) => `
   <div class="hero-card-copy"><h3>${h.name}</h3><span class="role-pill">${h.role}</span><p>${h.tag}</p></div></article>`).join("");
 
 const familyGrid = $("#family-grid");
-if (familyGrid) familyGrid.innerHTML = DATA.types.map(t => `<div class="family-card family-${slugify(t.name)}" title="Type ${t.name}"><span class="family-symbol">${t.symbol}</span><b>${t.name}</b><small>${t.number}</small></div>`).join("");
+if (familyGrid) familyGrid.innerHTML = DATA.types.map(t => `<button type="button" class="family-card family-${slugify(t.name)}" data-select-type="${t.name}" title="Afficher les Henchs ${t.name}"><span class="family-symbol">${t.symbol}</span><b>${t.name}</b><small>${t.number}</small></button>`).join("");
 
-const typeFilter = $("#type-filter");
-DATA.types.forEach(t => { const option = document.createElement("option"); option.value = t.name; option.textContent = t.name; typeFilter.appendChild(option); });
-
-const bestiaryGrid = $("#bestiary-grid");
+const categories = $("#bestiary-categories");
+const bestiaryList = $("#bestiary-list");
 const emptyState = $("#empty-state");
 const resultCount = $("#result-count");
-const levelRules = $("#level-rules");
-const levelFilter = $("#level-filter");
-const statusFilter = $("#status-filter");
-if (levelRules && DATA.rules) levelRules.textContent = `Niveau maximum de référence : ${DATA.rules.henchLevelCap} • filtres par type et plage de niveau`;
+const collectionTitle = $("#collection-title");
+const typeTitle = $("#bestiary-type-title");
+const typeCount = $("#bestiary-type-count");
+const search = $("#search");
+let selectedType = DATA.types[1]?.name || DATA.types[0]?.name || "";
 
 function levelRangeFor(item) {
   if (Number.isFinite(item.levelMin) && Number.isFinite(item.levelMax)) return `${item.levelMin}–${item.levelMax}`;
+  if (Number.isFinite(item.levelMin)) return `${item.levelMin}+`;
   return "À définir";
 }
-function overlapsBand(item, band) {
-  if (!band || !Number.isFinite(item.levelMin) || !Number.isFinite(item.levelMax)) return false;
-  const [min, max] = band.split("-").map(Number);
-  return item.levelMin <= max && item.levelMax >= min;
+
+function getTypeItems(typeName) {
+  const query = search?.value.trim().toLowerCase() || "";
+  return DATA.bestiary
+    .filter(item => item.type === typeName)
+    .filter(item => !query || [item.id, item.name, item.zone, item.status, item.source].join(" ").toLowerCase().includes(query))
+    .sort((a, b) => (a.levelMin ?? 9999) - (b.levelMin ?? 9999) || a.name.localeCompare(b.name));
+}
+
+function renderCategories() {
+  if (!categories) return;
+  categories.innerHTML = DATA.types.map(t => {
+    const count = DATA.bestiary.filter(item => item.type === t.name).length;
+    return `<button type="button" class="bestiary-category ${t.name === selectedType ? "active" : ""}" data-type="${t.name}" aria-pressed="${t.name === selectedType}"><b>${t.symbol} ${t.name}</b><small>${count} Hench${count > 1 ? "s" : ""}</small></button>`;
+  }).join("");
 }
 
 function openHenchSheet(item) {
@@ -37,16 +48,15 @@ function openHenchSheet(item) {
   const image = $("#hench-modal-image");
   const placeholder = $("#hench-modal-placeholder");
   const typeInfo = typeByName[item.type];
-  const typeName = item.type;
   $("#hench-modal-number").textContent = `N° ${item.id}`;
   $("#hench-modal-stat-number").textContent = item.id;
   $("#hench-modal-title").textContent = item.name;
-  $("#hench-modal-type").textContent = `${typeInfo?.symbol || "?"} ${typeName}`;
+  $("#hench-modal-type").textContent = `${typeInfo?.symbol || "?"} ${item.type}`;
   $("#hench-modal-status").textContent = item.status;
   $("#hench-modal-art-status").textContent = item.status === "BOSS" ? "BOSS UNIQUE" : "HENCH MIXMASTER";
-  $("#hench-modal-zone").textContent = item.zone;
+  $("#hench-modal-zone").textContent = item.zone || "Zone à définir";
   $("#hench-modal-levels").textContent = levelRangeFor(item);
-  $("#hench-modal-note").textContent = `Type ${typeName} • niveau ${levelRangeFor(item)} • source : ${item.source || "MixMaster"}.`;
+  $("#hench-modal-note").textContent = `${item.name} • ${item.type} • niveau ${levelRangeFor(item)} • source : ${item.source || "MixMaster"}.`;
   modal.classList.toggle("modal-boss", item.status === "BOSS");
   $("#hench-modal-status").classList.toggle("status-boss", item.status === "BOSS");
   $("#hench-modal-status").classList.toggle("status-normal", item.status !== "BOSS");
@@ -58,37 +68,62 @@ function openHenchSheet(item) {
 }
 
 function renderBestiary() {
-  const query = $("#search").value.trim().toLowerCase();
-  const selectedType = typeFilter.value;
-  const selectedLevel = levelFilter ? levelFilter.value : "";
-  const status = statusFilter.value;
-  const results = DATA.bestiary.filter(item => {
-    const haystack = [item.id, item.name, item.type, item.zone, item.status, item.source].join(" ").toLowerCase();
-    return (!query || haystack.includes(query)) && (!selectedType || item.type === selectedType) && (!selectedLevel || overlapsBand(item, selectedLevel)) && (!status || item.status === status);
-  });
-  bestiaryGrid.innerHTML = results.map(item => {
-    const typeInfo = typeByName[item.type];
-    const typeSymbol = typeInfo ? typeInfo.symbol : "?";
-    const typeClass = slugify(item.type);
-    const statusClass = item.status === "BOSS" ? "boss" : "normal";
-    const portrait = item.portrait ? `<img class="hench-portrait" src="${item.portrait}" alt="${item.name}" loading="lazy" onerror="this.remove()">` : "";
-    return `<article class="hench-card" data-hench-id="${item.id}" tabindex="0" role="button" aria-label="Ouvrir la fiche de ${item.name}">
-      <div class="hench-art ${item.portrait ? "has-portrait" : ""}"><span class="hench-id">N° ${item.id}</span><span class="hench-state status-${statusClass}">${item.status}</span>${portrait}<div class="portrait-placeholder"><span class="hench-placeholder-mark">✦</span><span class="hench-placeholder-text">PORTRAIT À ASSOCIER</span></div></div>
-      <div class="hench-copy"><h3>${item.name}</h3><div class="hench-tags"><span class="type-pill type-${typeClass}"><span>${typeSymbol}</span>${item.type}</span></div><div class="hench-meta"><span><b>Zone</b> ${item.zone}</span><span><b>Niveaux</b> ${levelRangeFor(item)}</span></div><span class="asset-file">MIXMASTER • ${levelRangeFor(item)}</span></div>
-    </article>`;
-  }).join("");
+  const typeInfo = typeByName[selectedType];
+  const allInType = DATA.bestiary.filter(item => item.type === selectedType);
+  const results = getTypeItems(selectedType);
+  renderCategories();
+  if (typeTitle) typeTitle.textContent = selectedType;
+  if (typeCount) typeCount.textContent = `${results.length} / ${allInType.length} Henchs de type ${selectedType}`;
+  if (collectionTitle) collectionTitle.textContent = `${typeInfo?.symbol || "✦"} ${selectedType} — catalogue MixMaster`;
+  if (resultCount) resultCount.textContent = `${results.length} affichés`;
+  if (!bestiaryList) return;
+  bestiaryList.innerHTML = results.map(item => `
+    <article class="hench-row" data-hench-id="${item.id}" tabindex="0" role="button" aria-label="Ouvrir la fiche de ${item.name}">
+      <span class="hench-row-number">N° ${item.id}</span>
+      <span class="hench-row-main"><strong>${item.name}${item.status === "BOSS" ? `<span class="hench-row-status">BOSS</span>` : ""}</strong><small>${item.zone || "Zone à définir"}</small></span>
+      <span class="hench-row-level">Lv. ${levelRangeFor(item)}</span>
+    </article>`).join("");
   emptyState.hidden = results.length > 0;
-  resultCount.textContent = `${results.length} / ${DATA.bestiary.length} Henchs`;
 }
 
-$("#search").addEventListener("input", renderBestiary);
-typeFilter.addEventListener("change", renderBestiary);
-if (levelFilter) levelFilter.addEventListener("change", renderBestiary);
-statusFilter.addEventListener("change", renderBestiary);
-bestiaryGrid.addEventListener("click", event => { const card = event.target.closest(".hench-card"); if (!card) return; const item = DATA.bestiary.find(entry => entry.id === card.dataset.henchId); if (item) openHenchSheet(item); });
-bestiaryGrid.addEventListener("keydown", event => { const card = event.target.closest(".hench-card"); if (card && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); const item = DATA.bestiary.find(entry => entry.id === card.dataset.henchId); if (item) openHenchSheet(item); } });
+function selectType(typeName, scrollIntoView = false) {
+  if (!typeByName[typeName]) return;
+  selectedType = typeName;
+  renderBestiary();
+  if (scrollIntoView) $("#bestiary")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+categories?.addEventListener("click", event => {
+  const button = event.target.closest("[data-type]");
+  if (button) selectType(button.dataset.type);
+});
+
+familyGrid?.addEventListener("click", event => {
+  const button = event.target.closest("[data-select-type]");
+  if (button) selectType(button.dataset.selectType, true);
+});
+
+search?.addEventListener("input", renderBestiary);
+
+bestiaryList?.addEventListener("click", event => {
+  const row = event.target.closest(".hench-row");
+  if (!row) return;
+  const item = DATA.bestiary.find(entry => entry.id === row.dataset.henchId);
+  if (item) openHenchSheet(item);
+});
+
+bestiaryList?.addEventListener("keydown", event => {
+  const row = event.target.closest(".hench-row");
+  if (row && (event.key === "Enter" || event.key === " ")) {
+    event.preventDefault();
+    const item = DATA.bestiary.find(entry => entry.id === row.dataset.henchId);
+    if (item) openHenchSheet(item);
+  }
+});
+
 const detailModal = $("#hench-modal");
-$("#hench-modal-close").addEventListener("click", () => detailModal.close());
-$("#hench-modal-close-action").addEventListener("click", () => detailModal.close());
-detailModal.addEventListener("click", event => { if (event.target === detailModal) detailModal.close(); });
+$("#hench-modal-close")?.addEventListener("click", () => detailModal.close());
+$("#hench-modal-close-action")?.addEventListener("click", () => detailModal.close());
+detailModal?.addEventListener("click", event => { if (event.target === detailModal) detailModal.close(); });
+
 renderBestiary();
